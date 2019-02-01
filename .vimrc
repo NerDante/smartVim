@@ -83,9 +83,13 @@ Plug 'majutsushi/tagbar'
 Plug 'justinmk/vim-syntax-extra'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/vim-easy-align'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
+" 打开文件自动定位到最后编辑的位置
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif)"'")
 
 "plugset:color scheme
 colorscheme onedark
@@ -117,3 +121,8 @@ let g:Lf_WildIgnore = {
             \}
 let g:Lf_UseCache = 0
 
+"plugset: vim-easy-align"
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)"
