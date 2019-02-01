@@ -73,7 +73,6 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
-" Declare the list of plugins.
 Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
@@ -84,6 +83,7 @@ Plug 'justinmk/vim-syntax-extra'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
+Plug 'scrooloose/nerdcommenter'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -122,7 +122,18 @@ let g:Lf_WildIgnore = {
 let g:Lf_UseCache = 0
 
 "plugset: vim-easy-align"
-" Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)"
+
+"plugset: nerdcommenter"
+let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
+let g:NERDCompactSexyComs = 1 " Use compact syntax for prettified multi-line comments
+let g:NERDDefaultAlign = 'left' " Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDAltDelims_java = 1 " Set a language to use its alternate delimiters by default
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/'  }  } " Add your own custom formats or override the defaults
+let g:NERDCommentEmptyLines = 1 " Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting
+let g:NERDToggleCheckAllLines = 1 " Enable NERDCommenterToggle to check all selected lines is commented or not 
+
+
+
