@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " 通用设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ";"      " 定义<leader>键
@@ -78,18 +78,15 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-Plug 'majutsushi/tagbar'
 Plug 'justinmk/vim-syntax-extra'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
-Plug 'scrooloose/nerdcommenter'
 
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
-
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -115,9 +112,6 @@ let g:airline_right_alt_sep = ''
 "plugset: nerdtree
 nmap <F2> :NERDTreeToggle<CR>
 
-"plugset: tagbar
-nmap <F6> :TagbarToggle<CR>
-
 "plugset: LeaderF
 nnoremap <leader>f :LeaderfFile ~<cr>
 let g:Lf_WildIgnore = {
@@ -129,16 +123,3 @@ let g:Lf_UseCache = 0
 "plugset: vim-easy-align"
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)"
-
-"plugset: nerdcommenter"
-let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
-let g:NERDCompactSexyComs = 1 " Use compact syntax for prettified multi-line comments
-let g:NERDDefaultAlign = 'left' " Align line-wise comment delimiters flush left instead of following code indentation
-let g:NERDAltDelims_java = 1 " Set a language to use its alternate delimiters by default
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/'  }  } " Add your own custom formats or override the defaults
-let g:NERDCommentEmptyLines = 1 " Allow commenting and inverting empty lines (useful when commenting a region)
-let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting
-let g:NERDToggleCheckAllLines = 1 " Enable NERDCommenterToggle to check all selected lines is commented or not 
-
-
-
