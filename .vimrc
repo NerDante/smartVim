@@ -87,6 +87,10 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
+
+Plug 'Yggdroot/indentLine'
+Plug 'maralla/completor.vim'
+Plug 'mhinz/vim-startify'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -114,8 +118,9 @@ nmap <F2> :NERDTreeToggle<CR>
 
 "plugset: LeaderF
 nnoremap <leader>f :LeaderfFile ~<cr>
-let g:Lf_WildIgnore = {
-            \ 'dir': ['.svn','.git','.hg','.vscode','.wine','.deepinwine','.oh-my-zsh'],
+nnoremap <leader>b :LeaderfBuffer<cr>
+nnoremap <leader>t :LeaderfBufTag<cr> 
+let g:Lf_WildIgnore = { \ 'dir': ['.svn','.git','.hg','.vscode','.wine','.deepinwine','.oh-my-zsh'],
             \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
             \}
 let g:Lf_UseCache = 0
@@ -123,3 +128,19 @@ let g:Lf_UseCache = 0
 "plugset: vim-easy-align"
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)"
+
+"plugset: completor"
+let g:completor_clang_binary = '/usr/bin/clang'
+let g:completor_python_binary = '/usr/bin/python3'
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+
+"plugset: startify"
+let g:startify_custom_header = [
+            \ '    +--------------------------------------+',
+            \ '    |                                      |',
+            \ '    |          HELLO, GOOD LUCK!!          |',
+            \ '    |                                      |',
+            \ '    +---------------------+----------------+',
+            \]
