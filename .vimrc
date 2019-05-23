@@ -120,7 +120,8 @@ nmap <F2> :NERDTreeToggle<CR>
 nnoremap <leader>f :LeaderfFile ~<cr>
 nnoremap <leader>b :LeaderfBuffer<cr>
 nnoremap <leader>t :LeaderfBufTag<cr> 
-let g:Lf_WildIgnore = { \ 'dir': ['.svn','.git','.hg','.vscode','.wine','.deepinwine','.oh-my-zsh'],
+let g:Lf_WildIgnore = { 
+            \ 'dir': ['.svn','.git','.hg','.vscode','.wine','.deepinwine','.oh-my-zsh'],
             \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
             \}
 let g:Lf_UseCache = 0
