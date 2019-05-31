@@ -94,6 +94,7 @@ Plug 'mhinz/vim-startify'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/gutentags_plus'
 Plug 'skywind3000/vim-preview'
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -120,14 +121,16 @@ let g:airline_right_alt_sep = ''
 nmap <F2> :NERDTreeToggle<CR>
 
 "plugset: LeaderF
-nnoremap <leader>f :LeaderfFile ~<cr>
 nnoremap <leader>b :LeaderfBuffer<cr>
 nnoremap <leader>t :LeaderfBufTag<cr> 
+let g:Lf_ShortcutF = '<leader>f' "find in current project directory
 let g:Lf_WildIgnore = { 
             \ 'dir': ['.svn','.git','.hg','.vscode','.wine','.deepinwine','.oh-my-zsh'],
             \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
             \}
-let g:Lf_UseCache = 0
+let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
+let g:Lf_WorkingDirectoryMode = 'Ac'
+let g:Lf_ShowRelativePath = 1
 
 "plugset: vim-easy-align"
 xmap ga <Plug>(EasyAlign)
@@ -136,6 +139,7 @@ nmap ga <Plug>(EasyAlign)"
 "plugset: completor"
 let g:completor_clang_binary = '/usr/bin/clang'
 let g:completor_python_binary = '/usr/bin/python3'
+let g:completor_gocode_binary = '/usr/bin/gocode'
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
@@ -146,7 +150,7 @@ let g:startify_custom_header = [
             \ ' ██   ██ ██ ████  ████        ██    ██ ████   ██  ██  ██  ',
             \ ' ██   ██ ██ ██ ████ ██        ██    ██ ██ ██  ██   ████   ',
             \ '  ██ ██  ██ ██  ██  ██        ██    ██ ██  ██ ██    ██    ',
-            \ '  ████   ██ ██      ██        ██    ██ ██   ████    ██    ',
+            \ '   ███   ██ ██      ██        ██    ██ ██   ████    ██    ',
             \]
 
 "plugset: vim-gutentags"
