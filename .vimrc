@@ -95,6 +95,8 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/gutentags_plus'
 Plug 'skywind3000/vim-preview'
 Plug 'Yggdroot/vim-mark'
+Plug 'tpope/vim-commentary'
+Plug 'vim-scripts/DoxygenToolkit.vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -146,11 +148,11 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 
 "plugset: startify"
 let g:startify_custom_header = [
-            \ ' ██   ██ ██ ███    ███     ████████ ██ ███    ██ ██    ██ ',
-            \ ' ██   ██ ██ ████  ████        ██    ██ ████   ██  ██  ██  ',
-            \ ' ██   ██ ██ ██ ████ ██        ██    ██ ██ ██  ██   ████   ',
-            \ '  ██ ██  ██ ██  ██  ██        ██    ██ ██  ██ ██    ██    ',
-            \ '   ███   ██ ██      ██        ██    ██ ██   ████    ██    ',
+            \ '                                   _____ ',
+            \ '   ______________ _________ _________  /_',
+            \ '   __  ___/_  __ `__ \  __ `/_  ___/  __/',
+            \ '   _(__  )_  / / / / / /_/ /_  /   / /_  ',
+            \ '   /____/ /_/ /_/ /_/\__,_/ /_/    \__/',
             \]
 
 "plugset: vim-gutentags"
@@ -190,3 +192,4 @@ let g:gutentags_plus_switch = 1
 "vim-preview
 autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr> "p 打开预览窗口"
 autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr> "P 关闭预览窗口"
+
