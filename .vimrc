@@ -89,7 +89,6 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
 Plug 'Yggdroot/indentLine'
-Plug 'maralla/completor.vim'
 Plug 'mhinz/vim-startify'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/gutentags_plus'
@@ -97,6 +96,18 @@ Plug 'skywind3000/vim-preview'
 Plug 'Yggdroot/vim-mark'
 Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/DoxygenToolkit.vim'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'Shougo/deoplete-clangx'
+Plug 'zchee/deoplete-jedi'
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+Plug 'stamblerre/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -137,14 +148,6 @@ let g:Lf_ShowRelativePath = 1
 "plugset: vim-easy-align"
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)"
-
-"plugset: completor"
-let g:completor_clang_binary = '/usr/bin/clang'
-let g:completor_python_binary = '/usr/bin/python3'
-let g:completor_gocode_binary = '/usr/bin/gocode'
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 
 "plugset: startify"
 let g:startify_custom_header = [
@@ -192,4 +195,12 @@ let g:gutentags_plus_switch = 1
 "vim-preview
 autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr> "p 打开预览窗口"
 autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr> "P 关闭预览窗口"
+
+"plugset: deoplete 
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#go#gocode_binary = '/Users/danteliu/code/gowork/bin/gocode'
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 
