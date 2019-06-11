@@ -79,7 +79,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'justinmk/vim-syntax-extra'
-Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
 
@@ -96,6 +95,7 @@ Plug 'skywind3000/vim-preview'
 Plug 'Yggdroot/vim-mark'
 Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/DoxygenToolkit.vim'
+Plug 'sheerun/vim-polyglot'   "代码高亮
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -198,6 +198,7 @@ autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr> "P 关闭预�
 
 "plugset: deoplete 
 let g:deoplete#enable_at_startup = 1
+set pyxversion=3
 let g:deoplete#sources#go#gocode_binary = '/Users/danteliu/code/gowork/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"

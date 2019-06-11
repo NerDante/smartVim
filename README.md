@@ -1,13 +1,25 @@
-## 介绍
-自用vim轻量级配置，欢迎各位看官尝试，使用了vim-plug插件管理器，非常方便管理
+        _____ 
+        ______________ _________ _________  /_
+        __  ___/_  __ `__ \  __ `/_  ___/  __/
+        _(__  )_  / / / / / /_/ /_  /   / /_  
+        /____/ /_/ /_/ /_/\__,_/ /_/    \__/  
 
-## 依赖
+## Overview
+my vim config, use vim-plug to manage plugins
+
+## Required
+- vim verison > 8.0
 - gtags
 - python (leaderF)
-- clang (completor.vim)
+- clang (deoplete)
 
-## 安装方法
-执行 install.sh
+## Install
 ```
+git clone https://github.com/NerDante/smartVim.git
+cd smartVim
 ./install.sh
 ```
+
+## Main Plugins
+
+## Keymap
