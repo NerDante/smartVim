@@ -82,16 +82,12 @@ Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'justinmk/vim-syntax-extra'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
-
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
-
 Plug 'Yggdroot/indentLine'
 Plug 'mhinz/vim-startify'
+
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/gutentags_plus'
+
 Plug 'skywind3000/vim-preview'
 Plug 'Yggdroot/vim-mark'
 Plug 'tpope/vim-commentary'
@@ -105,6 +101,9 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+
 Plug 'Shougo/deoplete-clangx'
 Plug 'zchee/deoplete-jedi'
 Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
@@ -206,3 +205,7 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 
+"plugset: neosnippet
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
