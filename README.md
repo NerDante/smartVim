@@ -7,7 +7,7 @@
 
 ## Overview
 my vim config, use vim-plug to manage plugins
-![image](https://github.com/NerDante/smartVim/screenshot/startPage.png)
+![image](https://github.com/NerDante/smartVim/blob/master/screenshot/startPage.png)
 
 ## Required
 - vim verison > 8.0 (asynchronous completion)
