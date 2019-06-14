@@ -108,6 +108,10 @@ Plug 'Shougo/deoplete-clangx'
 Plug 'zchee/deoplete-jedi'
 Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 Plug 'stamblerre/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+
+Plug 'easymotion/vim-easymotion'
+Plug 'Shougo/echodoc.vim'
+Plug 'Chiel92/vim-autoformat'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -192,7 +196,7 @@ nnoremap <leader>o <c-o>
 "plugset: gutentags_plus"
 let g:gutentags_plus_switch = 1
 
-"vim-preview
+"plugset: vim-preview
 autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr> "p 打开预览窗口"
 autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr> "P 关闭预览窗口"
 
@@ -209,3 +213,6 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+"plugset: echodoc.vim
+let g:echodoc_enable_at_startup = 1
