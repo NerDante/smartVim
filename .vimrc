@@ -68,7 +68,7 @@ set helplang=cn
 set termencoding=utf-8
 set encoding=utf8
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
-
+" "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "插件列表
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -113,6 +113,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'Shougo/echodoc.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'majutsushi/tagbar'
+Plug 'terryma/vim-smooth-scroll'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -127,6 +128,7 @@ colorscheme onedark
 let g:airline_theme='onedark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1 "show tab
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 if !exists('g:airline_symbols')
    let g:airline_symbols = {}
 endif
@@ -220,6 +222,14 @@ let g:echodoc_enable_at_startup = 1
 
 "plugset: tagbar
 nmap <leader>2 :TagbarToggle<CR>
+let g:tagbar_sort = 0
+
+"plugset: 
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+
 
 "key map: 
 noremap <leader>wj <c-w>j
