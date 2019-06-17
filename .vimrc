@@ -112,6 +112,7 @@ Plug 'stamblerre/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symli
 Plug 'easymotion/vim-easymotion'
 Plug 'Shougo/echodoc.vim'
 Plug 'Chiel92/vim-autoformat'
+Plug 'majutsushi/tagbar'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -135,7 +136,7 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
 "plugset: nerdtree
-nmap <F2> :NERDTreeToggle<CR>
+nmap <leader>1 :NERDTreeToggle<CR>
 
 "plugset: LeaderF
 nnoremap <leader>b :LeaderfBuffer<cr>
@@ -216,3 +217,12 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 "plugset: echodoc.vim
 let g:echodoc_enable_at_startup = 1
+
+"plugset: tagbar
+nmap <leader>2 :TagbarToggle<CR>
+
+"key map: 
+noremap <leader>wj <c-w>j
+noremap <leader>wk <c-w>k
+noremap <leader>wh <c-w>h
+noremap <leader>wl <c-w>l
