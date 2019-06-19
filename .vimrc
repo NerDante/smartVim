@@ -114,6 +114,7 @@ Plug 'Shougo/echodoc.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'majutsushi/tagbar'
 Plug 'terryma/vim-smooth-scroll'
+Plug 'tpope/vim-fugitive'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -158,11 +159,11 @@ nmap ga <Plug>(EasyAlign)"
 
 "plugset: startify"
 let g:startify_custom_header = [
-            \'                               __     _    ___         ',
-            \'    _________ ___  ____ ______/ /_   | |  / (_)___ ___ ',
-            \'   / ___/ __ `__ \/ __ `/ ___/ __/   | | / / / __ `__ \ ',
-            \'  (__  ) / / / / / /_/ / /  / /_     | |/ / / / / / / /',
-            \' /____/_/ /_/ /_/\__,_/_/   \__/     |___/_/_/ /_/ /_/ ',
+            \' Smart                         __     _    ___          ',
+            \'    _________ ___  ____ ______/ /_   | |  / (_)___ ___  ',
+            \'   /  __/ __ `__ \/ __ `/ ___/ __/   | | / / / __ `__ \ ',
+            \'  (__  ) / / / / / /_/ / /  / /_     | |/ / / / / / / / ',
+            \' /____/_/ /_/ /_/\__,_/_/   \__/     |___/_/_/ /_/ /_/  ',
             \]
 "
 "plugset: vim-gutentags"
