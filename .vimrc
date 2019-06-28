@@ -147,6 +147,7 @@ nmap <leader>1 :NERDTreeToggle<CR>
 "plugset: LeaderF
 nnoremap <leader>b :LeaderfBuffer<cr>
 nnoremap <leader>t :LeaderfBufTag<cr> 
+nnoremap <leader>a :LeaderfTag<cr> 
 let g:Lf_ShortcutF = '<leader>f' "find in current project directory
 let g:Lf_WildIgnore = { 
             \ 'dir': ['.svn','.git','.hg','.vscode','.wine','.deepinwine','.oh-my-zsh'],
@@ -196,9 +197,6 @@ let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 " 禁用 gutentags 自动加载 gtags 数据库的行为
 let g:gutentags_auto_add_gtags_cscope = 0
 
-"映射函数跳转快捷键"
-nnoremap <leader>i <c-]>
-nnoremap <leader>o <c-o>
 
 "plugset: gutentags_plus"
 let g:gutentags_plus_switch = 1
@@ -240,3 +238,6 @@ noremap <leader>wj <c-w>j
 noremap <leader>wk <c-w>k
 noremap <leader>wh <c-w>h
 noremap <leader>wl <c-w>l
+
+nnoremap <leader>i <c-]>
+nnoremap <leader>o <c-o>
