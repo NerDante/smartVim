@@ -15,3 +15,14 @@ git clone https://github.com/NerDante/smartVim.git
 cd smartVim
 ./install.sh
 ```
+
+## ScreenShot
+### Filetree and tagbar
+![image](https://github.com/NerDante/smartVim/blob/master/screenshot/TreeAndTag.gif)
+### complete based deoplete.vim
+![image](https://github.com/NerDante/smartVim/blob/master/screenshot/complete.gif)
+### fuzzy find based leaderf
+![image](https://github.com/NerDante/smartVim/blob/master/screenshot/fuzzyfind.gif)
+### jump to define/reference 
+![image](https://github.com/NerDante/smartVim/blob/master/screenshot/getreference.gif)
+![image](https://github.com/NerDante/smartVim/blob/master/screenshot/gotodefine.gif)
