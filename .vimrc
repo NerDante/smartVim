@@ -207,8 +207,6 @@ autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr> "P 关闭预�
 
 "plugset: deoplete 
 let g:deoplete#enable_at_startup = 1
-set pyxversion=3
-let g:deoplete#sources#go#gocode_binary = '/Users/danteliu/code/gowork/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -241,3 +239,5 @@ noremap <leader>wl <c-w>l
 
 nnoremap <leader>i <c-]>
 nnoremap <leader>o <c-o>
+
+source ~/.vimrc.local

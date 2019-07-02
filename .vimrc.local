@@ -1,0 +1,6 @@
+
+" machine depended config 
+
+" deoplete environment set
+set pyxversion=3
+let g:deoplete#sources#go#gocode_binary = '/Users/danteliu/code/gowork/bin/gocode'
