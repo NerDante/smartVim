@@ -59,6 +59,8 @@ Index  | plugin                                                                 
 key        | description
 ---------  | ----------------------
 `; `  | leader key
+`<leader>1` | open/close file tree
+`<leader>1` | open/close tagbar
 `<leader>f` | find files under project
 `<leader>t`  | find tags in current buff(file)
 `<leader>b`  | find opend buffer(file)
@@ -66,6 +68,15 @@ key        | description
 `<leader>gd` | find symbol definition
 `<leader>ci` | comment/uncomment, just in visual mode
 `<leader>cs` | comment in pretty way, just in visual mode
+`<leader>wh` | window navigate
+`<leader>wj` | window navigate
+`<leader>wk` | window navigate
+`<leader>wl` | window navigate
+`<leader>m`  | highlight word under cursor with different colors
+`<c-d>` | scroll one page down
+`<c-u>` | scroll one page up
+`<c-k>` | expend snippet
+
 ## ScreenShot
 ### Filetree and tagbar
 ![image](https://github.com/NerDante/smartVim/blob/master/screenshot/TreeAndTag.gif)
