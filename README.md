@@ -56,7 +56,16 @@ Index  | plugin                                                                 
 30     | [fatih/vim-go](https://github.com/fatih/vim-go)                                     | many featrures support for go development
 
 ## Keymap
-to be add ....
+key        | description
+---------  | ----------------------
+;          | leader key
+<leader>f  | find files under project
+<leader>t  | find tags in current buff(file)
+<leader>b  | find opend buffer(file)
+<leader>gs | find symbol under cursor
+<leader>gd | find symbol definition
+<leader>ci | comment/uncomment, just in visual mode
+<leader>cs | comment in pretty way, just in visual mode
 ## ScreenShot
 ### Filetree and tagbar
 ![image](https://github.com/NerDante/smartVim/blob/master/screenshot/TreeAndTag.gif)
