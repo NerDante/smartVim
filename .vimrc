@@ -90,7 +90,8 @@ Plug 'skywind3000/gutentags_plus'
 
 Plug 'skywind3000/vim-preview'
 Plug 'Yggdroot/vim-mark'
-Plug 'tpope/vim-commentary'
+"Plug 'tpope/vim-commentary'
+Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 Plug 'sheerun/vim-polyglot'   "代码高亮
 
@@ -200,6 +201,9 @@ let g:gutentags_auto_add_gtags_cscope = 0
 
 "plugset: gutentags_plus"
 let g:gutentags_plus_switch = 1
+let g:gutentags_plus_nomap = 1
+noremap <silent> <leader>gs :GscopeFind s <C-R><C-W><cr>   "Find symbol(reference) under cursor"
+noremap <silent> <leader>gd :GscopeFind g <C-R><C-W><cr>   "Find symbol definition under cursor"
 
 "plugset: vim-preview
 autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr> "p 打开预览窗口"
@@ -231,10 +235,13 @@ noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 "plugset: vim-go
-noremap <leader>gd :GoDef<CR>
-noremap <leader>gr :GoRun<CR>
-noremap <leader>gf :GoFmt<CR>
-noremap <leader>gm :GoImports<CR>
+function s:golangMap()
+    noremap <leader>gd :GoDef<CR>
+    noremap <leader>gr :GoRun<CR>
+    noremap <leader>gf :GoFmt<CR>
+    noremap <leader>gm :GoImports<CR>
+endfunction
+autocmd FileType go call s:golangMap()
 
 "key map: 
 noremap <leader>wj <c-w>j

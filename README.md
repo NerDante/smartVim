@@ -39,7 +39,7 @@ Index  | plugin                                                                 
 13     | [skywind3000/gutentags_plus](https://github.com/skywind3000/gutentags_plus)         | Gutentags_plus works with gutentags and provides seemless databases switching
 14     | [skywind3000/vim-preview](https://github.com/skywind3000/vim-preview)               | The missing preview window for vim
 15     | [Yggdroot/vim-mark](https://github.com/Yggdroot/vim-mark)                           | mark/unmark world uner the cursor
-16     | [tpope/vim-commentary](https://github.com/tpope/vim-commentary)                     | for comment
+16     | [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)             | for comment
 17     | [vim-scripts/DoxygenToolkit.vim](https://github.com/vim-scripts/DoxygenToolkit.vim) | for generate doc
 18     | [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot)                     | highlight code
 19     | [Shougo/deoplete.nvim](https://github.com/Shougo/deoplete.nvim)                     | compelete engine
