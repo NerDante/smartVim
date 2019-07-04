@@ -56,12 +56,13 @@ Index  | plugin                                                                 
 30     | [fatih/vim-go](https://github.com/fatih/vim-go)                                     | many featrures support for go development
 
 ## Keymap
-key        | description
----------  | ----------------------
-`; `  | leader key
-`<leader>1` | open/close file tree
-`<leader>1` | open/close tagbar
-`<leader>f` | find files under project
+key          | description
+---------    | ----------------------
+`; `         | leader key
+`<leader>1`  | open/close file tree
+`<leader>2`  | open/close tagbar
+`<leader>3`  | open/close undo tree
+`<leader>f`  | find files under project
 `<leader>t`  | find tags in current buff(file)
 `<leader>b`  | find opend buffer(file)
 `<leader>gs` | find symbol under cursor
@@ -73,9 +74,9 @@ key        | description
 `<leader>wk` | window navigate
 `<leader>wl` | window navigate
 `<leader>m`  | highlight word under cursor with different colors
-`<c-d>` | scroll one page down
-`<c-u>` | scroll one page up
-`<c-k>` | expend snippet
+`<c-d>`      | scroll one page down
+`<c-u>`      | scroll one page up
+`<c-k>`      | expend snippet
 
 ## ScreenShot
 ### Filetree and tagbar

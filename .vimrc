@@ -117,6 +117,7 @@ Plug 'majutsushi/tagbar'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'  }
+Plug 'mbbill/undotree'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -242,6 +243,9 @@ function s:golangMap()
     noremap <leader>gm :GoImports<CR>
 endfunction
 autocmd FileType go call s:golangMap()
+
+"plugset: undotree
+nnoremap <leader>3 :UndotreeToggle<cr>
 
 "key map: 
 noremap <leader>wj <c-w>j
