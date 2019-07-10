@@ -118,6 +118,7 @@ Plug 'terryma/vim-smooth-scroll'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'  }
 Plug 'mbbill/undotree'
+Plug 'ryanoasis/vim-devicons'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -125,11 +126,11 @@ call plug#end()
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 
 "plugset:color scheme
+set background=dark
 colorscheme onedark
 "colorscheme gruvbox 
 
 "plugset: vim-airline
-let g:airline_theme='onedark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1 "show tab
 let g:airline#extensions#tabline#formatter = 'unique_tail'
