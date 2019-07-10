@@ -256,5 +256,7 @@ noremap <leader>wl <c-w>l
 
 nnoremap <leader>i <c-]>
 nnoremap <leader>o <c-o>
+nnoremap <leader>qq :cclose<CR>
+nnoremap <leader>qb :bdelete<CR>
 
 source ~/.vimrc.local

@@ -73,6 +73,8 @@ key          | description
 `<leader>wj` | window navigate
 `<leader>wk` | window navigate
 `<leader>wl` | window navigate
+`<leader>qq` | close quickfix window
+`<leader>qb` | close current buffer
 `<leader>m`  | highlight word under cursor with different colors
 `<c-d>`      | scroll one page down
 `<c-u>`      | scroll one page up
