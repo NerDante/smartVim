@@ -85,6 +85,8 @@ let beauty_switch=0
 call plug#begin('~/.vim/plugged')
 Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
+Plug 'liuchengxu/space-vim-dark'
+
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
@@ -137,10 +139,13 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 
 "plugset:color scheme
 set background=dark
-"colorscheme onedark
-colorscheme gruvbox 
+hi Comment cterm=italic
+colorscheme onedark
+"colorscheme gruvbox 
+"colorscheme space-vim-dark
 
 "plugset: vim-airline
+"let g:airline_theme="onedark" "open if colorscheme not support vim-airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1 "show tab
 let g:airline#extensions#tabline#formatter = 'unique_tail'
