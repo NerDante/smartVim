@@ -1,7 +1,11 @@
-
-" 通用设置
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" leader key 设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ";"      " 定义<leader>键
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 通用设置
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible         " 设置不兼容原始vi模式
 filetype on              " 设置开启文件类型侦测
 filetype plugin on       " 设置加载对应文件类型的插件
@@ -68,7 +72,12 @@ set helplang=cn
 set termencoding=utf-8
 set encoding=utf8
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
-" "
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"配置选项开关
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let beauty_switch=0
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "插件列表
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -90,7 +99,6 @@ Plug 'skywind3000/gutentags_plus'
 
 Plug 'skywind3000/vim-preview'
 Plug 'Yggdroot/vim-mark'
-"Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 Plug 'sheerun/vim-polyglot'   "代码高亮
@@ -118,7 +126,9 @@ Plug 'terryma/vim-smooth-scroll'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'  }
 Plug 'mbbill/undotree'
-Plug 'ryanoasis/vim-devicons'
+if beauty_switch
+    Plug 'ryanoasis/vim-devicons'
+endif
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -127,8 +137,8 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 
 "plugset:color scheme
 set background=dark
-colorscheme onedark
-"colorscheme gruvbox 
+"colorscheme onedark
+colorscheme gruvbox 
 
 "plugset: vim-airline
 let g:airline_powerline_fonts = 1
@@ -139,10 +149,17 @@ let g:airline#extensions#whitespace#enabled = 0
 if !exists('g:airline_symbols')
    let g:airline_symbols = {}
 endif
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
+if beauty_switch
+"let g:airline_left_sep = ''
+"let g:airline_left_alt_sep = ''
+"let g:airline_right_sep = ''
+"let g:airline_right_alt_sep = ''
+else
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+endif
 
 "plugset: nerdtree
 nmap <leader>1 :NERDTreeToggle<CR>
