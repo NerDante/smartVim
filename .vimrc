@@ -128,6 +128,7 @@ Plug 'terryma/vim-smooth-scroll'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'  }
 Plug 'mbbill/undotree'
+Plug 'lilydjwg/colorizer'
 if beauty_switch
     Plug 'ryanoasis/vim-devicons'
 endif
@@ -139,7 +140,6 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 
 "plugset:color scheme
 set background=dark
-hi Comment cterm=italic
 colorscheme onedark
 "colorscheme gruvbox 
 "colorscheme space-vim-dark
