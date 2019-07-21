@@ -1,6 +1,6 @@
 
 ## Overview
-**My vim config, use vim-plug to manage plugins. The goal of this config is build vim a 
+**My vim config, use vim-plug to manage plugins. The goal of this config is build vim as 
 IDE-like tool for development C/C++, Python and Go. You can add more language
 support with alternative plugin.**
     
