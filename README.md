@@ -90,3 +90,6 @@ key          | description
 ### jump to define/reference 
 ![image](https://github.com/NerDante/smartVim/blob/master/screenshot/getreference.gif)
 ![image](https://github.com/NerDante/smartVim/blob/master/screenshot/gotodefine.gif)
+
+## Contact
+LordQiang@hotmail.com
