@@ -14,6 +14,7 @@ support with alternative plugin.**
 - gtags
 - python (leaderF)
 - clang (deoplete)
+- pynvim (deoplete)
 
 ## Install
 ```

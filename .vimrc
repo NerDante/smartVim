@@ -4,6 +4,13 @@
 let mapleader = ";"      " 定义<leader>键
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"配置选项开关, 如有需要可打开下面的开关
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let beauty_switch=0      "状态栏箭头及devicons支持
+let complete_python=0    "支持python自动补全特性
+let complete_golang=0    "支持go自动补全特性"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 通用设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible         " 设置不兼容原始vi模式
@@ -73,10 +80,6 @@ set termencoding=utf-8
 set encoding=utf8
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"配置选项开关
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let beauty_switch=0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "插件列表
@@ -106,19 +109,26 @@ Plug 'vim-scripts/DoxygenToolkit.vim'
 Plug 'sheerun/vim-polyglot'   "代码高亮
 
 if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
 endif
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 
 Plug 'Shougo/deoplete-clangx'
-Plug 'zchee/deoplete-jedi'
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
-Plug 'stamblerre/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+
+if complete_python
+    Plug 'zchee/deoplete-jedi'
+endif
+
+if complete_golang
+    Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+    Plug 'stamblerre/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'  }
+endif
 
 Plug 'easymotion/vim-easymotion'
 Plug 'Shougo/echodoc.vim'
@@ -126,9 +136,9 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'majutsushi/tagbar'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'tpope/vim-fugitive'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'  }
 Plug 'mbbill/undotree'
 Plug 'lilydjwg/colorizer'
+
 if beauty_switch
     Plug 'ryanoasis/vim-devicons'
 endif
@@ -154,16 +164,17 @@ let g:airline#extensions#whitespace#enabled = 0
 if !exists('g:airline_symbols')
    let g:airline_symbols = {}
 endif
+
 if beauty_switch
-"let g:airline_left_sep = ''
-"let g:airline_left_alt_sep = ''
-"let g:airline_right_sep = ''
-"let g:airline_right_alt_sep = ''
+    let g:airline_left_sep = ''
+    let g:airline_left_alt_sep = ''
+    let g:airline_right_sep = ''
+    let g:airline_right_alt_sep = ''
 else
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
+    let g:airline_left_sep = ''
+    let g:airline_left_alt_sep = ''
+    let g:airline_right_sep = ''
+    let g:airline_right_alt_sep = ''
 endif
 
 "plugset: nerdtree
@@ -258,15 +269,16 @@ noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
-"plugset: vim-go
-function s:golangMap()
-    noremap <leader>gd :GoDef<CR>
-    noremap <leader>gr :GoRun<CR>
-    noremap <leader>gf :GoFmt<CR>
-    noremap <leader>gm :GoImports<CR>
-endfunction
-autocmd FileType go call s:golangMap()
-
+if complete_golang
+    "plugset: vim-go
+    function s:golangMap()
+        noremap <leader>gd :GoDef<CR>
+        noremap <leader>gr :GoRun<CR>
+        noremap <leader>gf :GoFmt<CR>
+        noremap <leader>gm :GoImports<CR>
+    endfunction
+    autocmd FileType go call s:golangMap()
+endif
 "plugset: undotree
 nnoremap <leader>3 :UndotreeToggle<cr>
 
