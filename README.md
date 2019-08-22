@@ -1,12 +1,7 @@
 
 ## Overview
-**My vim config, use vim-plug to manage plugins. The goal of this config is build vim as 
-IDE-like tool for development C/C++, Python and Go. You can add more language
-support with alternative plugin.**
+**The conifg use vim-plug as plugin manager. The goal is build vim as IDE-like tool for development C/C++, Python and Go. You can add more language support with alternative plugin.**
     
-     
-     
- 
 ![image](https://github.com/NerDante/smartVim/blob/master/screenshot/startPage.png)
 
 ## Required
