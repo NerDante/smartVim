@@ -59,7 +59,7 @@ key          | description
 `<leader>2`  | open/close tagbar
 `<leader>3`  | open/close undo tree
 `<leader>f`  | find files under project
-`<leader>t`  | find tags in current buff(file)
+`<leader>s`  | find tags in current buff(file)
 `<leader>b`  | find opend buffer(file)
 `<leader>gs` | find symbol under cursor
 `<leader>gd` | find symbol definition

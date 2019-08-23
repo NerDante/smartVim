@@ -182,7 +182,7 @@ nmap <leader>1 :NERDTreeToggle<CR>
 
 "plugset: LeaderF
 nnoremap <leader>b :LeaderfBuffer<cr>
-nnoremap <leader>t :LeaderfBufTag<cr> 
+nnoremap <leader>s :LeaderfBufTag<cr> 
 nnoremap <leader>a :LeaderfTag<cr> 
 let g:Lf_ShortcutF = '<leader>f' "find in current project directory
 let g:Lf_WildIgnore = { 
