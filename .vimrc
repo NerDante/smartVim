@@ -134,7 +134,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'Shougo/echodoc.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'majutsushi/tagbar'
-Plug 'terryma/vim-smooth-scroll'
 Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
 Plug 'lilydjwg/colorizer'
@@ -263,14 +262,8 @@ let g:echodoc_enable_at_startup = 1
 nmap <leader>2 :TagbarToggle<CR>
 let g:tagbar_sort = 0
 
-"plugset:  smooth_scroll
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
-
+"plugset: vim-go
 if complete_golang
-    "plugset: vim-go
     function s:golangMap()
         noremap <leader>gd :GoDef<CR>
         noremap <leader>gr :GoRun<CR>

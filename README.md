@@ -47,9 +47,8 @@ Index  | plugin                                                                 
 25     | [stamblerre/gocode](https://github.com/stamblerre/gocode)                           | complete for go
 26     | [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion)           | powerful mothion plugin
 27     | [Shougo/echodoc.vim](https://github.com/Shougo/echodoc.vim)                         | show function param list in commandline
-28     | [terryma/vim-smooth-scroll](https://github.com/terryma/vim-smooth-scroll)           | for scroll smoothly
-29     | [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)                         | git support
-30     | [fatih/vim-go](https://github.com/fatih/vim-go)                                     | many featrures support for go development
+28     | [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)                         | git support
+29     | [fatih/vim-go](https://github.com/fatih/vim-go)                                     | many featrures support for go development
 
 ## Keymap
 key          | description
