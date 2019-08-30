@@ -18,37 +18,37 @@ cd smartVim
 ./install.sh
 ```
 ## Main plugins
-Index  | plugin                                                                              | description
------- | --------                                                                            | -------------
-1      | [joshdick/onedark.vim](https://github.com/joshdick/onedark.vim)                     | colorscheme
-2      | [morhetz/gruvbox](https://github.com/morhetz/gruvbox)                               | colorscheme
-3      | [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline)               | beautify status line
-4      | [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)                       | show file tree in vim
-5      | [Yggdroot/LeaderF](https://github.com/Yggdroot/LeaderF)                             | powerful fuzzy find plugin
-6      | [majutsushi/tagbar](https://github.com/majutsushi/tagbar)                           | show tag in current buffer
-7      | [Chiel92/vim-autoformat](https://github.com/Chiel92/vim-autoformat)                 | autoformat
-8      | [jiangmiao/auto-pairs](https://github.com/jiangmiao/auto-pairs)                     | insert or delete brackets, parens, quotes in pair
-9      | [junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align)               | aligin
-10     | [Yggdroot/indentLine](https://github.com/Yggdroot/indentLine)                       | show indent line
-11     | [mhinz/vim-startify](https://github.com/mhinz/vim-startify)                         | startpage for vim
-12     | [ludovicchabant/vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)     | manage file tags
-13     | [skywind3000/gutentags_plus](https://github.com/skywind3000/gutentags_plus)         | Gutentags_plus works with gutentags and provides seemless databases switching
-14     | [skywind3000/vim-preview](https://github.com/skywind3000/vim-preview)               | The missing preview window for vim
-15     | [Yggdroot/vim-mark](https://github.com/Yggdroot/vim-mark)                           | mark/unmark world uner the cursor
-16     | [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)             | for comment
-17     | [vim-scripts/DoxygenToolkit.vim](https://github.com/vim-scripts/DoxygenToolkit.vim) | for generate doc
-18     | [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot)                     | highlight code
-19     | [Shougo/deoplete.nvim](https://github.com/Shougo/deoplete.nvim)                     | compelete engine
-20     | [Shougo/neosnippet.vim](https://github.com/Shougo/neosnippet.vim)                   | snippet for deoplete.vim
-21     | [Shougo/neosnippet-snippets](https://github.com/Shougo/neosnippet-snippets)         | snippet for deoplete.vim
-22     | [Shougo/deoplete-clangx](https://github.com/Shougo/deoplete-clangx)                 | support c/c++ complete based deoplete
-23     | [zchee/deoplete-jedi](https://github.com/zchee/deoplete-jedi)                       | support python complete based deoplete
-24     | [deoplete-plugins/deoplete-go](https://github.com/deoplete-plugins/deoplete-go)     | support golang complete based deoplete
-25     | [stamblerre/gocode](https://github.com/stamblerre/gocode)                           | complete for go
-26     | [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion)           | powerful mothion plugin
-27     | [Shougo/echodoc.vim](https://github.com/Shougo/echodoc.vim)                         | show function param list in commandline
-28     | [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)                         | git support
-29     | [fatih/vim-go](https://github.com/fatih/vim-go)                                     | many featrures support for go development
+ plugin                                                                              | description
+ --------                                                                            | -------------
+ [joshdick/onedark.vim](https://github.com/joshdick/onedark.vim)                     | colorscheme
+ [morhetz/gruvbox](https://github.com/morhetz/gruvbox)                               | colorscheme
+ [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline)               | beautify status line
+ [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)                       | show file tree in vim
+ [Yggdroot/LeaderF](https://github.com/Yggdroot/LeaderF)                             | powerful fuzzy find plugin
+ [majutsushi/tagbar](https://github.com/majutsushi/tagbar)                           | show tag in current buffer
+ [Chiel92/vim-autoformat](https://github.com/Chiel92/vim-autoformat)                 | autoformat
+ [jiangmiao/auto-pairs](https://github.com/jiangmiao/auto-pairs)                     | insert or delete brackets, parens, quotes in pair
+ [junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align)               | aligin
+ [Yggdroot/indentLine](https://github.com/Yggdroot/indentLine)                       | show indent line
+ [mhinz/vim-startify](https://github.com/mhinz/vim-startify)                         | startpage for vim
+ [ludovicchabant/vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)     | manage file tags
+ [skywind3000/gutentags_plus](https://github.com/skywind3000/gutentags_plus)         | Gutentags_plus works with gutentags and provides seemless databases switching
+ [skywind3000/vim-preview](https://github.com/skywind3000/vim-preview)               | The missing preview window for vim
+ [Yggdroot/vim-mark](https://github.com/Yggdroot/vim-mark)                           | mark/unmark world uner the cursor
+ [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)             | for comment
+ [vim-scripts/DoxygenToolkit.vim](https://github.com/vim-scripts/DoxygenToolkit.vim) | for generate doc
+ [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot)                     | highlight code
+ [Shougo/deoplete.nvim](https://github.com/Shougo/deoplete.nvim)                     | compelete engine
+ [Shougo/neosnippet.vim](https://github.com/Shougo/neosnippet.vim)                   | snippet for deoplete.vim
+ [Shougo/neosnippet-snippets](https://github.com/Shougo/neosnippet-snippets)         | snippet for deoplete.vim
+ [Shougo/deoplete-clangx](https://github.com/Shougo/deoplete-clangx)                 | support c/c++ complete based deoplete
+ [zchee/deoplete-jedi](https://github.com/zchee/deoplete-jedi)                       | support python complete based deoplete
+ [deoplete-plugins/deoplete-go](https://github.com/deoplete-plugins/deoplete-go)     | support golang complete based deoplete
+ [stamblerre/gocode](https://github.com/stamblerre/gocode)                           | complete for go
+ [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion)           | powerful mothion plugin
+ [Shougo/echodoc.vim](https://github.com/Shougo/echodoc.vim)                         | show function param list in commandline
+ [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)                         | git support
+ [fatih/vim-go](https://github.com/fatih/vim-go)                                     | many featrures support for go development
 
 ## Keymap
 key          | description

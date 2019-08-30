@@ -1,0 +1,30 @@
+{
+  // update funtion symbol for statusline
+  "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+  "coc.preferences.colorSupport": true,
+  "suggest.enablePreview": true,
+  "suggest.echodocSupport": true,
+  // "diagnostic.displayByAle": true,
+
+  // languageserver
+  "languageserver": {
+    "clangd": {
+      "command": "clangd",
+      "args": ["--background-index"],
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["c", "cpp", "objc", "objcpp"]
+    }
+  },
+
+  // coc-snippets config
+  "snippets.extends": {
+    "cpp": ["c"],
+    "javascriptreact": ["javascript"],
+    "typescript": ["javascript"]
+  },
+
+  "snippets.ultisnips.directories": [
+    "UltiSnips"
+  ],
+  
+}
