@@ -7,7 +7,7 @@ let mapleader = ";"      " 定义<leader>键
 "配置选项开关, 如有需要可打开下面的开关
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let beauty_switch=0      "状态栏箭头及devicons支持
-let autocomplete_engine="coc" " deoplete or coc
+let autocomplete_engine="deoplete" " deoplete or coc
 let complete_python=0     "支持python自动补全特性
 let complete_golang=0     "支持go自动补全特性
 
