@@ -109,6 +109,9 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 Plug 'sheerun/vim-polyglot'
 
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+
 if autocomplete_engine == "deoplete"
     if has('nvim')
         Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -117,8 +120,6 @@ if autocomplete_engine == "deoplete"
         Plug 'roxma/nvim-yarp'
         Plug 'roxma/vim-hug-neovim-rpc'
     endif
-    Plug 'Shougo/neosnippet.vim'
-    Plug 'Shougo/neosnippet-snippets'
 
     Plug 'Shougo/deoplete-clangx'
 
@@ -243,6 +244,11 @@ noremap <silent> <leader>gd :GscopeFind g <C-R><C-W><cr>   "Find symbol definiti
 autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr> "p 打开预览窗口"
 autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr> "P 关闭预览窗口"
 
+"plugset: neosnippet
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
 if autocomplete_engine == "deoplete"
     "plugset: deoplete 
     let g:deoplete#enable_at_startup = 1
@@ -251,10 +257,6 @@ if autocomplete_engine == "deoplete"
     inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
     inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 
-    "plugset: neosnippet
-    imap <C-j>     <Plug>(neosnippet_expand_or_jump)
-    smap <C-j>     <Plug>(neosnippet_expand_or_jump)
-    xmap <C-j>     <Plug>(neosnippet_expand_target)
 
     "plugset: vim-go
     if complete_golang
