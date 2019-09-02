@@ -87,9 +87,7 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
-Plug 'joshdick/onedark.vim'
-Plug 'morhetz/gruvbox'
-Plug 'liuchengxu/space-vim-dark'
+Plug 'NerDante/smartColors'
 
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
@@ -157,11 +155,11 @@ call plug#end()
 " Locate to last position while open
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 
-"plugset:color scheme
-"set background=dark
-colorscheme onedark
-colorscheme gruvbox 
-"colorscheme space-vim-dark
+"color scheme: onedark, gruvbox, space-vim-dark
+set background=dark
+"colorscheme gruvbox 
+"colorscheme onedark
+colorscheme space-vim-dark
 
 "plugset: vim-airline
 "let g:airline_theme="onedark" "open if colorscheme not support vim-airline
