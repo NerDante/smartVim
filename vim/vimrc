@@ -157,9 +157,9 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 
 "color scheme: onedark, gruvbox, space-vim-dark
 set background=dark
-"colorscheme gruvbox 
+colorscheme gruvbox 
 "colorscheme onedark
-colorscheme space-vim-dark
+"colorscheme space-vim-dark
 
 "plugset: vim-airline
 "let g:airline_theme="onedark" "open if colorscheme not support vim-airline
