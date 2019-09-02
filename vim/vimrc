@@ -149,6 +149,8 @@ Plug 'lilydjwg/colorizer'
 if beauty_switch
     Plug 'ryanoasis/vim-devicons'
 endif
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -156,8 +158,8 @@ call plug#end()
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 
 "plugset:color scheme
-set background=dark
-"colorscheme onedark
+"set background=dark
+colorscheme onedark
 colorscheme gruvbox 
 "colorscheme space-vim-dark
 
@@ -328,7 +330,7 @@ elseif autocomplete_engine == "coc"
     endfunction
 
     " Highlight symbol under cursor on CursorHold
-    autocmd CursorHold * silent call CocActionAsync('highlight')
+    "autocmd CursorHold * silent call CocActionAsync('highlight')
 
     " Remap for rename current word
     nmap <leader>rn <Plug>(coc-rename)
