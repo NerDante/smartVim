@@ -1,30 +1,47 @@
 {
-  // update funtion symbol for statusline
-  "coc.preferences.currentFunctionSymbolAutoUpdate": true,
-  "coc.preferences.colorSupport": true,
-  "suggest.enablePreview": true,
-  "suggest.echodocSupport": true,
-  // "diagnostic.displayByAle": true,
+    // update funtion symbol for statusline
+    "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+    "coc.preferences.colorSupport": false,
+    "suggest.enablePreview": false,
+    "suggest.echodocSupport": true,
+    // "diagnostic.displayByAle": true,
 
-  // languageserver
-  "languageserver": {
-    "clangd": {
-      "command": "clangd",
-      "args": ["--background-index"],
-      "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["c", "cpp", "objc", "objcpp"]
-    }
-  },
+    //git
+    "git.enableGutters": true,
+    "git.branchCharacter":"\uf408",
+    "git.addGlameToBufferVar": true,
+    "git.addGlameToVirtualText": true,
+    "git.virtualTextPrefix": "      ❯❯ ",
+    "git.addedSign.hlGroup": "GitGutterAdd",
+    "git.changedSign.hlGroup": "GitGutterChange",
+    "git.removedSign.hlGroup": "GitGutterDelete",
+    "git.topRemovedSign.hlGroup": "GitGutterDelete",
+    "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
+    "git.addedSign.text":"▎",
+    "git.changedSign.text":"▎",
+    "git.removedSign.text":"▏",
+    "git.topRemovedSign.text": "▔",
+    "git.changeRemovedSign.text": "▋",
 
-  // coc-snippets config
-  "snippets.extends": {
+    // languageserver
+    "languageserver": {
+        "clangd": {
+            "command": "clangd",
+            "args": ["--background-index"],
+            "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+            "filetypes": ["c", "cpp", "objc", "objcpp"]
+        }
+    },
+
+    // coc-snippets config
+    "snippets.extends": {
     "cpp": ["c"],
     "javascriptreact": ["javascript"],
     "typescript": ["javascript"]
-  },
+    },
 
-  "snippets.ultisnips.directories": [
+    "snippets.ultisnips.directories": [
     "UltiSnips"
-  ],
-  
+    ],
+
 }
