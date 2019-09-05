@@ -1,0 +1,15 @@
+1. how to generate compile_commands.json for clangd?
+
+- use cmake to build project:
+    Add set(CMAKE_EXPORT_COMPILE_COMMANDS ON) in your CMakeLists.txt
+- use Makefile build project:
+    Install compiledb which is developed with python:
+    $ pip install compiledb
+    Run "compiledb -n make" in your project root:
+    $ compiledb -n make
+
+2. switch complete engine between coc and deoplete
+    just set autocomplete_engine in vimrc: 
+    let autocomplete_engine="coc"
+    or 
+    let autocomplete_engine="deoplete"
