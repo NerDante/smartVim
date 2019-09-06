@@ -92,7 +92,6 @@ Plug 'NerDante/smartColors'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-Plug 'justinmk/vim-syntax-extra'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
 Plug 'Yggdroot/indentLine'
@@ -105,6 +104,7 @@ Plug 'skywind3000/vim-preview'
 Plug 'Yggdroot/vim-mark'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/DoxygenToolkit.vim'
+
 Plug 'sheerun/vim-polyglot'
 
 Plug 'Shougo/neosnippet.vim'
@@ -155,11 +155,10 @@ call plug#end()
 " Locate to last position while open
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 
-"color scheme: onedark, gruvbox, space-vim-dark
+"color scheme: onedark, gruvbox
 set background=dark
 colorscheme gruvbox 
 "colorscheme onedark
-"colorscheme space-vim-dark
 
 "plugset: vim-airline
 "let g:airline_theme="onedark" "open if colorscheme not support vim-airline
@@ -186,6 +185,7 @@ endif
 
 "plugset: nerdtree
 nmap <leader>1 :NERDTreeToggle<CR>
+let g:NERDTreeWinPos = "right"
 
 "plugset: LeaderF
 nnoremap <leader>b :LeaderfBuffer<cr>
@@ -354,9 +354,13 @@ endif
 "plugset: echodoc.vim
 let g:echodoc_enable_at_startup = 1
 
+"plugset: vim-polyglot
+let g:polyglot_disabled = ['markdown']
+
 "plugset: tagbar
 nmap <leader>2 :TagbarToggle<CR>
 let g:tagbar_sort = 0
+let g:tagbar_left = 1
 
 "plugset: undotree
 nnoremap <leader>3 :UndotreeToggle<cr>
