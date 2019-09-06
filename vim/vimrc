@@ -6,7 +6,7 @@ let mapleader = ";"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " custom settings 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let beauty_switch=0      
+let beauty_switch=1      
 let autocomplete_engine="coc" " deoplete or coc
 let complete_python=0     " support python autocomplete
 let complete_golang=0     " support go autocomplete
@@ -130,14 +130,12 @@ if autocomplete_engine == "deoplete"
         Plug 'stamblerre/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
         Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'  }
     endif
-endif
-
-if autocomplete_engine == "coc"
+    Plug 'Shougo/echodoc.vim'
+else
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
 
 Plug 'easymotion/vim-easymotion'
-Plug 'Shougo/echodoc.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
@@ -185,7 +183,6 @@ endif
 
 "plugset: nerdtree
 nmap <leader>1 :NERDTreeToggle<CR>
-let g:NERDTreeWinPos = "right"
 
 "plugset: LeaderF
 nnoremap <leader>b :LeaderfBuffer<cr>
@@ -199,6 +196,7 @@ let g:Lf_WildIgnore = {
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
 let g:Lf_WorkingDirectoryMode = 'Ac'
 let g:Lf_ShowRelativePath = 1
+let g:Lf_WindowPosition = 'bottom'
 
 "plugset: vim-easy-align"
 xmap ga <Plug>(EasyAlign)
