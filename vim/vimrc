@@ -210,6 +210,12 @@ let g:startify_custom_header = [
             \'  ___/ / / / / / / /_/ / /  / /_     | |/ / / / / / / / ', 
             \' /____/_/ /_/ /_/\__,_/_/   \__/     |___/_/_/ /_/ /_/  ', 
             \]
+
+let g:startify_lists = [
+ \ { 'type': 'sessions',  'header': ['   Saved Sessions'] },
+ \ { 'type': 'files',     'header': ['   Recent files']   },
+ \ ]
+
 "
 "plugset: vim-gutentags"
 let g:gutentags_project_root = ['.root', '.svn', '.git', '.project']
