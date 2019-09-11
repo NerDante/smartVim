@@ -373,6 +373,15 @@ nnoremap <leader>3 :UndotreeToggle<cr>
 "plugset: vim-table-mode
 let g:table_mode_corner='|'
 
+"plugst: nerdcommenter
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+let g:NERDToggleCheckAllLines = 1
+let g:NERDAltDelims_c = 1
+
 "key map: 
 noremap <leader>wj <c-w>j
 noremap <leader>wk <c-w>k
