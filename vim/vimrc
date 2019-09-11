@@ -147,6 +147,7 @@ if beauty_switch
 endif
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'dhruvasagar/vim-table-mode'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -368,6 +369,9 @@ let g:tagbar_left = 1
 
 "plugset: undotree
 nnoremap <leader>3 :UndotreeToggle<cr>
+
+"plugset: vim-table-mode
+let g:table_mode_corner='|'
 
 "key map: 
 noremap <leader>wj <c-w>j
