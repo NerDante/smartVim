@@ -8,7 +8,7 @@ ln -s ~/.vim/vimrc.local ~/.vimrc.local
 
 #for neovim
 ln -s ~/.vim ~/.config/nvim
-ln -s ~/.vim ~/.config/nvim/init.vim
+ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
 
 # just install plug.vim, do not download used curl, add plug.vim in this repo
 #curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
