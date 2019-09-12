@@ -148,6 +148,7 @@ endif
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'terryma/vim-multiple-cursors'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
