@@ -81,6 +81,10 @@ set termencoding=utf-8
 set encoding=utf8
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Locate to last position while open
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " plugin list
@@ -139,6 +143,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'Chiel92/vim-autoformat'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 Plug 'mbbill/undotree'
 Plug 'lilydjwg/colorizer'
 
@@ -152,10 +157,12 @@ Plug 'terryma/vim-multiple-cursors'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
-" Locate to last position while open
-autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 
-"color scheme: onedark, gruvbox
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" plugin list
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"colorscheme: onedark, gruvbox
 set background=dark
 colorscheme gruvbox 
 "colorscheme onedark
@@ -238,7 +245,6 @@ let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
 let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxI']
 let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 let g:gutentags_auto_add_gtags_cscope = 0
-
 
 "plugset: gutentags_plus"
 let g:gutentags_plus_switch = 1
