@@ -6,8 +6,8 @@ let mapleader = ";"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " custom settings 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let beauty_switch=1      
-let autocomplete_engine="coc" " deoplete or coc
+let beauty_switch=0    
+let autocomplete_engine="deoplete" " deoplete or coc
 let complete_python=0     " support python autocomplete
 let complete_golang=0     " support go autocomplete
 
