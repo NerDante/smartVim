@@ -268,18 +268,6 @@ if autocomplete_engine == "deoplete"
     inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
     inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
     inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
-
-
-    "plugset: vim-go
-    if complete_golang
-        function s:golangMap()
-            noremap <leader>gd :GoDef<CR>
-            noremap <leader>gr :GoRun<CR>
-            noremap <leader>gf :GoFmt<CR>
-            noremap <leader>gm :GoImports<CR>
-        endfunction
-        autocmd FileType go call s:golangMap()
-    endif
 elseif autocomplete_engine == "coc"
     "plugset : coc.vim 
     " if hidden is not set, TextEdit might fail.
@@ -361,6 +349,17 @@ elseif autocomplete_engine == "coc"
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 else
     echom "auto complete engine is not correct"
+endif
+
+"plugset: vim-go
+if complete_golang
+    function s:golangMap()
+        noremap <leader>gd :GoDef<CR>
+        noremap <leader>gr :GoRun<CR>
+        noremap <leader>gf :GoFmt<CR>
+        noremap <leader>gm :GoImports<CR>
+    endfunction
+    autocmd FileType go call s:golangMap()
 endif
 
 "plugset: echodoc.vim
