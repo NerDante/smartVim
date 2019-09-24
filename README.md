@@ -82,9 +82,7 @@ key          | description
 `<c-k>`      | expend snippet
 
 ## ScreenShot
-### Filetree and tagbar
-![image](https://github.com/NerDante/smartVim/blob/master/screenshot/TreeAndTag.gif)
-### complete based deoplete.vim
+### complete(LSP based)
 ![image](https://github.com/NerDante/smartVim/blob/master/screenshot/complete.gif)
 ### fuzzy find based leaderf
 ![image](https://github.com/NerDante/smartVim/blob/master/screenshot/fuzzyfind.gif)
