@@ -83,11 +83,12 @@ key          | description
 ## ScreenShot
 ### complete(LSP based)
 ![image](https://github.com/NerDante/smartVim/blob/master/screenshot/complete.gif)
-### fuzzy find based leaderf
+### fuzzy find based leaderf(file and symbol)
 ![image](https://github.com/NerDante/smartVim/blob/master/screenshot/fuzzyfind.gif)
 ### jump to define/reference 
-![image](https://github.com/NerDante/smartVim/blob/master/screenshot/getreference.gif)
 ![image](https://github.com/NerDante/smartVim/blob/master/screenshot/gotodefine.gif)
+![image](https://github.com/NerDante/smartVim/blob/master/screenshot/getreference.gif)
+
 
 ## Contact
 LordQiang@hotmail.com
