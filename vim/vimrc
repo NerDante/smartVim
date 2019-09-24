@@ -7,7 +7,6 @@ let mapleader = ";"
 " custom settings 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let beauty_switch=0    
-let autocomplete_engine="deoplete" " deoplete or coc
 let complete_python=0     " support python autocomplete
 let complete_golang=0     " support go autocomplete
 
@@ -114,30 +113,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 
-if autocomplete_engine == "deoplete"
-    if has('nvim')
-        Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    else
-        Plug 'Shougo/deoplete.nvim'
-        Plug 'roxma/nvim-yarp'
-        Plug 'roxma/vim-hug-neovim-rpc'
-    endif
-
-    Plug 'Shougo/deoplete-clangx'
-
-    if complete_python
-        Plug 'zchee/deoplete-jedi'
-    endif
-
-    if complete_golang
-        Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
-        Plug 'stamblerre/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
-        Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'  }
-    endif
-    Plug 'Shougo/echodoc.vim'
-else
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-endif
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'easymotion/vim-easymotion'
 Plug 'Chiel92/vim-autoformat'
@@ -159,15 +135,17 @@ call plug#end()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" plugin list
+" plugin set
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "colorscheme: onedark, gruvbox
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
 colorscheme gruvbox 
 "colorscheme onedark
 
 "plugset: vim-airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "let g:airline_theme="onedark" "open if colorscheme not support vim-airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1 "show tab
@@ -191,9 +169,11 @@ else
 endif
 
 "plugset: nerdtree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>1 :NERDTreeToggle<CR>
 
 "plugset: LeaderF
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>b :LeaderfBuffer<cr>
 nnoremap <leader>s :LeaderfBufTag<cr> 
 nnoremap <leader>a :LeaderfTag<cr> 
@@ -208,10 +188,12 @@ let g:Lf_ShowRelativePath = 1
 let g:Lf_WindowPosition = 'bottom'
 
 "plugset: vim-easy-align"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)"
 
 "plugset: startify"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:startify_custom_header = [
             \'    _____                      __     _    ___          ', 
             \'   / ___/____ ___  ____ ______/ /_   | |  / (_)___ ___  ', 
@@ -227,6 +209,7 @@ let g:startify_lists = [
 
 "
 "plugset: vim-gutentags"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gutentags_project_root = ['.root', '.svn', '.git', '.project']
 let g:gutentags_ctags_tagfile = '.tags'
 let s:vim_tags = expand('~/.cache/tags')
@@ -247,111 +230,100 @@ let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 let g:gutentags_auto_add_gtags_cscope = 0
 
 "plugset: gutentags_plus"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gutentags_plus_switch = 1
 let g:gutentags_plus_nomap = 1
 noremap <silent> <leader>gs :GscopeFind s <C-R><C-W><cr>   "Find symbol(reference) under cursor"
 noremap <silent> <leader>gd :GscopeFind g <C-R><C-W><cr>   "Find symbol definition under cursor"
 
 "plugset: vim-preview
-autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr> "p 打开预览窗口"
-autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr> "P 关闭预览窗口"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr> "p open preview window
+autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr> "P close preview window
 
 "plugset: neosnippet
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
-if autocomplete_engine == "deoplete"
-    "plugset: deoplete 
-    let g:deoplete#enable_at_startup = 1
-    let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
-elseif autocomplete_engine == "coc"
-    "plugset : coc.vim 
-    " if hidden is not set, TextEdit might fail.
-    set hidden
+"plugset : coc.vim 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" if hidden is not set, TextEdit might fail.
+set hidden
+" Some servers have issues with backup files, see #649
+set nobackup
+set nowritebackup
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+" always show signcolumns
+set signcolumn=yes
 
-    " Some servers have issues with backup files, see #649
-    set nobackup
-    set nowritebackup
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-    " You will have bad experience for diagnostic messages when it's default 4000.
-    set updatetime=300
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
-    " don't give |ins-completion-menu| messages.
-    set shortmess+=c
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
 
-    " always show signcolumns
-    set signcolumn=yes
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-    " Use tab for trigger completion with characters ahead and navigate.
-    " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-    inoremap <silent><expr> <TAB>
-          \ pumvisible() ? "\<C-n>" :
-          \ <SID>check_back_space() ? "\<TAB>" :
-          \ coc#refresh()
-    inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" Use `[c` and `]c` to navigate diagnostics
+nmap <silent> [c <Plug>(coc-diagnostic-prev)
+nmap <silent> ]c <Plug>(coc-diagnostic-next)
 
-    function! s:check_back_space() abort
-      let col = col('.') - 1
-      return !col || getline('.')[col - 1]  =~# '\s'
-    endfunction
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
-    " Use <c-space> to trigger completion.
-    inoremap <silent><expr> <c-space> coc#refresh()
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-    " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-    " Coc only does snippet and additional edit on confirm.
-    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
 
-    " Use `[c` and `]c` to navigate diagnostics
-    nmap <silent> [c <Plug>(coc-diagnostic-prev)
-    nmap <silent> ]c <Plug>(coc-diagnostic-next)
+" Highlight symbol under cursor on CursorHold
+"autocmd CursorHold * silent call CocActionAsync('highlight')
 
-    " Remap keys for gotos
-    nmap <silent> gd <Plug>(coc-definition)
-    nmap <silent> gy <Plug>(coc-type-definition)
-    nmap <silent> gi <Plug>(coc-implementation)
-    nmap <silent> gr <Plug>(coc-references)
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
 
-    " Use K to show documentation in preview window
-    nnoremap <silent> K :call <SID>show_documentation()<CR>
+" Use <tab> for select selections ranges, needs server support, like: coc-tsserver, coc-python
+nmap <silent> <TAB> <Plug>(coc-range-select)
+xmap <silent> <TAB> <Plug>(coc-range-select)
+xmap <silent> <S-TAB> <Plug>(coc-range-select-backword)
 
-    function! s:show_documentation()
-      if (index(['vim','help'], &filetype) >= 0)
-        execute 'h '.expand('<cword>')
-      else
-        call CocAction('doHover')
-      endif
-    endfunction
+" Add status line support, for integration with other plugin, checkout `:h coc-status`
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-    " Highlight symbol under cursor on CursorHold
-    "autocmd CursorHold * silent call CocActionAsync('highlight')
-
-    " Remap for rename current word
-    nmap <leader>rn <Plug>(coc-rename)
-
-    " Use <tab> for select selections ranges, needs server support, like: coc-tsserver, coc-python
-    nmap <silent> <TAB> <Plug>(coc-range-select)
-    xmap <silent> <TAB> <Plug>(coc-range-select)
-    xmap <silent> <S-TAB> <Plug>(coc-range-select-backword)
-
-    " Add status line support, for integration with other plugin, checkout `:h coc-status`
-    set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-    " Using CocList
-    " Show all diagnostics
-    nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-    " Manage extensions
-    nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-else
-    echom "auto complete engine is not correct"
-endif
+" Using CocList
+" Show all diagnostics
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+" Manage extensions
+nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 
 "plugset: vim-go
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if complete_golang
     function s:golangMap()
         noremap <leader>gd :GoDef<CR>
@@ -363,23 +335,29 @@ if complete_golang
 endif
 
 "plugset: echodoc.vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:echodoc_enable_at_startup = 1
 
 "plugset: vim-polyglot
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:polyglot_disabled = ['markdown']
 
 "plugset: tagbar
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>2 :TagbarToggle<CR>
 let g:tagbar_sort = 0
 let g:tagbar_left = 1
 
 "plugset: undotree
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>3 :UndotreeToggle<cr>
 
 "plugset: vim-table-mode
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:table_mode_corner='|'
 
 "plugst: nerdcommenter
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
@@ -388,7 +366,9 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
 let g:NERDAltDelims_c = 1
 
-"key map: 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"basic key map: 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap <leader>wj <c-w>j
 noremap <leader>wk <c-w>k
 noremap <leader>wh <c-w>h
@@ -399,5 +379,7 @@ nnoremap <leader>o <c-o>
 nnoremap <leader>qq :cclose<CR>
 nnoremap <leader>qb :bdelete<CR>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " machine-depend config
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 source ~/.vimrc.local

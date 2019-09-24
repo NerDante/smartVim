@@ -8,8 +8,3 @@
     Run "compiledb -n make" in your project root:
     $ compiledb -n make
 
-2. switch complete engine between coc and deoplete
-    just set autocomplete_engine in vimrc: 
-    let autocomplete_engine="coc"
-    or 
-    let autocomplete_engine="deoplete"
