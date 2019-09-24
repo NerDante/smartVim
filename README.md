@@ -1,14 +1,13 @@
 
 ## Overview
-**The conifg use vim-plug as plugin manager. The goal is build vim as IDE-like tool for development C/C++, Python and Go. You can add more language support with alternative plugin.**
-Support two ways of auto complete engine, coc and deoplete, you can choose either of them according your fancy.
+The conifg use vim-plug as plugin manager. The goal is build vim as IDE-like tool for development C/C++, Python and Go. You can add more language support with alternative plugin
     
 ![image](https://github.com/NerDante/smartVim/blob/master/screenshot/startPage.png)
 
 ## Required
 - vim verison > 8.0 (asynchronous completion)
-- gtags
-- python (leaderF)
+- [gtags](https://www.gnu.org/software/global)
+- [python](https://www.python.org) (leaderF)
 - [nodejs](https://nodejs.org/en/)
 - [clangd](https://clang.llvm.org/extra/clangd/Installation.html) (lsp for c/c++/objective-c)
 
