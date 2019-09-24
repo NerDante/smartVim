@@ -9,10 +9,6 @@ Support two ways of auto complete engine, coc and deoplete, you can choose eithe
 - vim verison > 8.0 (asynchronous completion)
 - gtags
 - python (leaderF)
-### deoplete based
-- clang (deoplete)
-- pynvim (deoplete)
-### coc based
 - [nodejs](https://nodejs.org/en/)
 - [clangd](https://clang.llvm.org/extra/clangd/Installation.html) (lsp for c/c++/objective-c)
 
@@ -25,8 +21,7 @@ cd smartVim
 ## Main plugins
  plugin                                                                              | description
  --------                                                                            | -------------
- [joshdick/onedark.vim](https://github.com/joshdick/onedark.vim)                     | colorscheme
- [morhetz/gruvbox](https://github.com/morhetz/gruvbox)                               | colorscheme
+ [NerDante/smartColors](https://github.com/NerDante/smartColors)                     | colorscheme collect
  [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline)               | beautify status line
  [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)                       | show file tree in vim
  [Yggdroot/LeaderF](https://github.com/Yggdroot/LeaderF)                             | powerful fuzzy find plugin
@@ -43,17 +38,19 @@ cd smartVim
  [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)             | for comment
  [vim-scripts/DoxygenToolkit.vim](https://github.com/vim-scripts/DoxygenToolkit.vim) | for generate doc
  [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot)                     | highlight code
- [Shougo/deoplete.nvim](https://github.com/Shougo/deoplete.nvim)                     | compelete engine
- [Shougo/neosnippet.vim](https://github.com/Shougo/neosnippet.vim)                   | snippet for deoplete.vim
- [Shougo/neosnippet-snippets](https://github.com/Shougo/neosnippet-snippets)         | snippet for deoplete.vim
- [Shougo/deoplete-clangx](https://github.com/Shougo/deoplete-clangx)                 | support c/c++ complete based deoplete
- [zchee/deoplete-jedi](https://github.com/zchee/deoplete-jedi)                       | support python complete based deoplete
- [deoplete-plugins/deoplete-go](https://github.com/deoplete-plugins/deoplete-go)     | support golang complete based deoplete
- [stamblerre/gocode](https://github.com/stamblerre/gocode)                           | complete for go
+ [Shougo/neosnippet-snippets](https://github.com/Shougo/neosnippet-snippets)         | snippet
  [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion)           | powerful mothion plugin
  [Shougo/echodoc.vim](https://github.com/Shougo/echodoc.vim)                         | show function param list in commandline
  [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)                         | git support
+ [junegunn/gv.vim](https://github.com/junegunn/gv.vim)                               | A git commit browser in Vim
  [fatih/vim-go](https://github.com/fatih/vim-go)                                     | many featrures support for go development
+ [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)                           | auto complete engine support LSP
+ [mbbill/undotree](https://github.com/mbbill/undotree)                               | visualizes undo history
+ [lilydjwg/colorizer](https://github.com/lilydjwg/colorizer)                         | A Vim plugin to colorize all text in the form #rrggbb or #rgb
+ [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)                 | Adds file type icons to Vim plugins such as: NERDTree, vim-airline, vim-startify and many more
+ [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.vim)      | preview Markdown in real-time with a web browser
+ [dhruvasagar/vim-table-mode](https://github.com/dhruvasagar/vim-table-mode)         | An awesome automatic table creator & formatter allowing one to create neat tables as you type
+ [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)     | True Sublime Text style multiple selections for Vim
 
 ## Keymap
 key          | description
@@ -65,8 +62,12 @@ key          | description
 `<leader>f`  | find files under project
 `<leader>s`  | find tags in current buff(file)
 `<leader>b`  | find opend buffer(file)
-`<leader>gs` | find symbol under cursor
-`<leader>gd` | find symbol definition
+`<leader>gs` | find symbol under cursor based tags
+`<leader>gd` | find symbol definition based tags
+`gd`         | find definition based coc
+`gy`         | find type-definition based coc
+`gi`         | find implementation based coc
+`gr`         | find references based coc
 `<leader>ci` | comment/uncomment, just in visual mode
 `<leader>cs` | comment in pretty way, just in visual mode
 `<leader>wh` | window navigate
