@@ -15,7 +15,7 @@ ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
 #install fonts
 if [ ${platform_type} == "Linux" ];then
     cp  -f fonts/* ~/.local/share/fonts
-elif[ ${platform_type} == "Darwin" ];then
+elif [ ${platform_type} == "Darwin" ];then
     cp  -f fonts/* ~/Library/Fonts
 else
     echo "not support platform type ${platform_type}"
