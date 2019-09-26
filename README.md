@@ -52,33 +52,35 @@ cd smartVim
  [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)     | True Sublime Text style multiple selections for Vim
 
 ## Keymap
-key          | description
----------    | ----------------------
-`; `         | leader key
-`<leader>1`  | open/close file tree
-`<leader>2`  | open/close tagbar
-`<leader>3`  | open/close undo tree
-`<leader>f`  | find files under project
-`<leader>s`  | find tags in current buff(file)
-`<leader>b`  | find opend buffer(file)
-`<leader>gs` | find symbol under cursor based tags
-`<leader>gd` | find symbol definition based tags
-`gd`         | find definition based coc
-`gy`         | find type-definition based coc
-`gi`         | find implementation based coc
-`gr`         | find references based coc
-`<leader>ci` | comment/uncomment, just in visual mode
-`<leader>cs` | comment in pretty way, just in visual mode
-`<leader>wh` | window navigate
-`<leader>wj` | window navigate
-`<leader>wk` | window navigate
-`<leader>wl` | window navigate
-`<leader>qq` | close quickfix window
-`<leader>qb` | close current buffer
-`<leader>m`  | highlight word under cursor with different colors
-`<c-d>`      | scroll one page down
-`<c-u>`      | scroll one page up
-`<c-k>`      | expend snippet
+key                 | description
+---------           | ----------------------
+`; `                | leader key
+`<leader>1`         | open/close file tree
+`<leader>2`         | open/close tagbar
+`<leader>3`         | open/close undo tree
+`<leader>f`         | find files under project
+`<leader>s`         | find tags in current buff(file)
+`<leader>b`         | find opend buffer(file)
+`<leader>gs`        | find symbol under cursor based tags
+`<leader>gd`        | find symbol definition based tags
+`gd`                | find definition based coc
+`gy`                | find type-definition based coc
+`gi`                | find implementation based coc
+`gr`                | find references based coc
+`<leader>ci`        | comment/uncomment, just in visual mode
+`<leader>cs`        | comment in pretty way, just in visual mode
+`<leader>wh`        | window navigate
+`<leader>wj`        | window navigate
+`<leader>wk`        | window navigate
+`<leader>wl`        | window navigate
+`<leader>qq`        | close quickfix window
+`<leader>qb`        | close current buffer
+`<leader>m`         | highlight word under cursor with different colors
+`<leader><leader>w` | easy motion forward
+`<leader><leader>b` | easy motion backword
+`<c-d>`             | scroll one page down
+`<c-u>`             | scroll one page up
+`<c-k>`             | expend snippet
 
 ## ScreenShot
 ### complete(LSP based)
