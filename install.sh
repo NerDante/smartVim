@@ -14,6 +14,7 @@ ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
 
 #install fonts
 if [ ${platform_type} == "Linux" ];then
+    mkdir -p ~/.local/share/fonts
     cp  -f fonts/* ~/.local/share/fonts
 elif [ ${platform_type} == "Darwin" ];then
     cp  -f fonts/* ~/Library/Fonts
