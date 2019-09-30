@@ -8,3 +8,7 @@
     Run "compiledb -n make" in your project root:
     $ compiledb -n make
 
+2. why icons and arrows not display normal when set  beauty_switch to 1 ?
+    you should set your terminal fonts to nerd fonts, this repo provide 
+    few in fonts directory, excute install.sh script will install these 
+    fonts to your system. 

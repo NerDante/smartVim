@@ -322,6 +322,8 @@ nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 
+let g:coc_global_extensions =['coc-pairs', 'coc-json', 'coc-python', 'coc-lists', 'coc-stylelint', 'coc-html', 'coc-css', 'coc-prettier']
+
 "plugset: vim-go
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if complete_golang
