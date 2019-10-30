@@ -130,6 +130,7 @@ endif
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'mattn/emmet-vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -141,7 +142,7 @@ call plug#end()
 "colorscheme: onedark, gruvbox
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
-colorscheme gruvbox 
+colorscheme gruvbox
 "colorscheme onedark
 
 "plugset: vim-airline
@@ -367,6 +368,13 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
 let g:NERDAltDelims_c = 1
+
+"plugst: vim-emmet
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+let g:user_emmet_mode='a'
+let g:user_emmet_leader_key='<C-K>'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "basic key map: 
