@@ -108,11 +108,10 @@ Plug 'Yggdroot/vim-mark'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
 Plug 'sheerun/vim-polyglot'
-
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'easymotion/vim-easymotion'
@@ -130,7 +129,6 @@ endif
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'mattn/emmet-vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -242,12 +240,6 @@ noremap <silent> <leader>gd :GscopeFind g <C-R><C-W><cr>   "Find symbol definiti
 autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr> "p open preview window
 autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr> "P close preview window
 
-"plugset: neosnippet
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
 "plugset : coc.vim 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " if hidden is not set, TextEdit might fail.
@@ -323,7 +315,7 @@ nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 
-let g:coc_global_extensions =['coc-pairs', 'coc-json', 'coc-python', 'coc-lists', 'coc-stylelint', 'coc-html', 'coc-css', 'coc-prettier']
+let g:coc_global_extensions =['coc-pairs', 'coc-json', 'coc-snippets', 'coc-python', 'coc-lists', 'coc-stylelint', 'coc-html', 'coc-css', 'coc-prettier']
 
 "plugset: vim-go
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -369,12 +361,11 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
 let g:NERDAltDelims_c = 1
 
-"plugst: vim-emmet
+"plugst: ultisnips
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
-let g:user_emmet_mode='a'
-let g:user_emmet_leader_key='<C-K>'
+let g:UltiSnipsExpandTrigger="<c-e>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "basic key map: 
