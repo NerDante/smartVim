@@ -37,7 +37,7 @@ cd smartVim
  [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)             | for comment
  [vim-scripts/DoxygenToolkit.vim](https://github.com/vim-scripts/DoxygenToolkit.vim) | for generate doc
  [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot)                     | highlight code
- [Shougo/neosnippet-snippets](https://github.com/Shougo/neosnippet-snippets)         | snippet
+ [SirVer/ultisnips](https://github.com/SirVer/ultisnips)                             | snippet
  [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion)           | powerful mothion plugin
  [Shougo/echodoc.vim](https://github.com/Shougo/echodoc.vim)                         | show function param list in commandline
  [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)                         | git support
@@ -81,7 +81,9 @@ key                 | description
 `<leader><leader>b` | easy motion backword
 `<c-d>`             | scroll one page down
 `<c-u>`             | scroll one page up
-`<c-k>`             | expand snippet and expand emmet abbeviation
+`<c-e>`             | expand snippet
+`<c-j>`             | jump to next snippets position
+`<c-l>`             | jump to priev snippets position
 
 ## ScreenShot
 ### complete(LSP based)
