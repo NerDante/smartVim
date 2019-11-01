@@ -50,7 +50,6 @@ cd smartVim
  [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.vim)      | preview Markdown in real-time with a web browser
  [dhruvasagar/vim-table-mode](https://github.com/dhruvasagar/vim-table-mode)         | An awesome automatic table creator & formatter allowing one to create neat tables as you type
  [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)     | True Sublime Text style multiple selections for Vim
- [mattn/emmet-vim](https://github.com/mattn/emmet-vim)                               | provides support for expanding abbreviations similar to emmet.
 
 ## Keymap
 key                 | description
