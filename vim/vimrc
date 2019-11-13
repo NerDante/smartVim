@@ -232,7 +232,7 @@ let g:gutentags_auto_add_gtags_cscope = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gutentags_plus_switch = 1
 let g:gutentags_plus_nomap = 1
-noremap <silent> <leader>gs :GscopeFind s <C-R><C-W><cr>   "Find symbol(reference) under cursor"
+noremap <silent> <leader>gr :GscopeFind s <C-R><C-W><cr>   "Find symbol(reference) under cursor"
 noremap <silent> <leader>gd :GscopeFind g <C-R><C-W><cr>   "Find symbol definition under cursor"
 
 "plugset: vim-preview

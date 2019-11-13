@@ -61,7 +61,7 @@ key                 | description
 `<leader>f`         | find files under project
 `<leader>s`         | find tags in current buff(file)
 `<leader>b`         | find opend buffer(file)
-`<leader>gs`        | find symbol under cursor based tags
+`<leader>gr`        | find symbol under cursor based tags
 `<leader>gd`        | find symbol definition based tags
 `gd`                | find definition based coc
 `gy`                | find type-definition based coc
