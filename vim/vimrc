@@ -174,8 +174,8 @@ nmap <leader>1 :NERDTreeToggle<CR>
 "plugset: LeaderF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>b :LeaderfBuffer<cr>
-nnoremap <leader>s :LeaderfBufTag<cr> 
-nnoremap <leader>a :LeaderfTag<cr> 
+nnoremap <leader>s :LeaderfBufTag<cr>
+nnoremap <leader>a :LeaderfTag<cr>
 let g:Lf_ShortcutF = '<leader>f' "find in current project directory
 let g:Lf_WildIgnore = { 
             \ 'dir': ['.svn','.git','.hg','.vscode','.wine','.deepinwine','.oh-my-zsh','.clangd', '.clangx'],
@@ -341,7 +341,7 @@ let g:polyglot_disabled = ['markdown']
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>2 :TagbarToggle<CR>
 let g:tagbar_sort = 0
-let g:tagbar_left = 1
+let g:tagbar_left = 0
 
 "plugset: undotree
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -379,6 +379,7 @@ nnoremap <leader>i <c-]>
 nnoremap <leader>o <c-o>
 nnoremap <leader>qq :cclose<CR>
 nnoremap <leader>qb :bdelete<CR>
+nnoremap <leader>qw :q<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " machine-depend config
