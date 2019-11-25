@@ -1,0 +1,148 @@
+###########################################################################
+#                            TextMate Snippets                            #
+###########################################################################
+
+priority -50
+
+snippet def "#define ..."
+#define $1
+endsnippet
+
+snippet #ifndef "#ifndef ... #define ... #endif"
+#ifndef ${1/([A-Za-z0-9_]+).*/$1/}
+#define ${1:SYMBOL} ${2:value}
+#endif /* ifndef $1 */
+endsnippet
+
+snippet #if "#if #endif" b
+#if ${1:0}
+${VISUAL}$0
+#endif
+endsnippet
+
+snippet mark "#pragma mark (mark)"
+#if 0
+${1:#pragma mark -
+}#pragma mark $2
+#endif
+
+$0
+endsnippet
+
+snippet main "main() (main)"
+int main(int argc, char *argv[])
+{
+	${VISUAL}$0
+	return 0;
+}
+endsnippet
+
+snippet for "for loop (for)"
+for (${2:i} = 0; $2 < ${1:count}; ${3:$2++})
+{
+	${VISUAL}$0
+}
+endsnippet
+
+snippet fori "for int loop (fori)"
+for (${4:int} ${2:i} = 0; $2 < ${1:count}; ${3:$2++})
+{
+	${VISUAL}$0
+}
+endsnippet
+
+snippet once "Include header once only guard"
+#ifndef ${1:`!p
+if not snip.c:
+	import random, string
+	name = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
+	rand = ''.join(random.sample(string.ascii_letters+string.digits, 8))
+	snip.rv = ('%s_%s' % (name,rand)).upper()
+else:
+	snip.rv = snip.c`}
+#define $1
+
+${VISUAL}$0
+
+#endif /* end of include guard: $1 */
+endsnippet
+
+snippet fprintf "fprintf ..."
+fprintf(${1:stderr}, "${2:%s}\n"${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%%)*(%.)?.*/(?2:\);)/}
+endsnippet
+
+snippet if "if(...){  }"
+if (${1:/* condition */})
+{
+	${VISUAL}$0
+}
+endsnippet
+
+snippet el "else{  }"
+else
+{
+	${VISUAL}$0
+}
+endsnippet
+
+snippet eli "else if .. (eli)"
+else if (${1:/* condition */})
+{
+	${VISUAL}$0
+}
+endsnippet
+
+snippet case "case val : break"
+case ${1:case-value}:
+	break;
+endsnippet
+
+snippet printf "printf .. (printf)"
+printf("${1:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
+endsnippet
+
+snippet st "struct"
+struct ${1:`!p snip.rv = (snip.basename or "name") + "_t"`}
+{
+	${0:/* data */}
+};
+endsnippet
+
+snippet ifnu "if(xx == NULL) { }"
+if (${1:val} == NULL)
+{
+	${VISUAL}$0
+}
+endsnippet
+
+# debug functions
+snippet ld "LOGDEBUG(...)"
+LOGDEBUG("${1:debug}\n");
+endsnippet
+
+snippet le "LOGERROR(...)"
+LOGERROR("${1:error}\n");
+endsnippet
+
+snippet li "LOGINFO(...)"
+LOGINFO("${1:info}\n");
+endsnippet
+
+# quick comment
+snippet ca "Begin add by xxx. 2019/11/19"
+/* Begin: Added by ${1:author}, Dscp:${1:description}  `!v strftime('%Y/%m/%d')` */
+${VISUAL}
+/* End  : Added by ${1:author},  Dscp:${1:description}   `!v strftime('%Y/%m/%d')` */
+endsnippet
+
+snippet cm "Begin Modified by xxx. 2019/11/19"
+/* Begin: Modified by ${1:author}, Dscp:${1:description}  `!v strftime('%Y/%m/%d')` */
+${VISUAL}
+/* End  : Modified by ${1:author},  Dscp:${1:description}   `!v strftime('%Y/%m/%d')` */
+endsnippet
+
+snippet cd "Begin Modified by xxx. 2019/11/19"
+/* Begin: Deleted by ${1:author}, Dscp:${1:description}  `!v strftime('%Y/%m/%d')` */
+${VISUAL}
+/* End  : Deleted by ${1:author},  Dscp:${1:description}   `!v strftime('%Y/%m/%d')` */
+endsnippet

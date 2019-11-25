@@ -184,7 +184,11 @@ let g:Lf_WildIgnore = {
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
 let g:Lf_WorkingDirectoryMode = 'Ac'
 let g:Lf_ShowRelativePath = 1
-let g:Lf_WindowPosition = 'bottom'
+if has('nvim')
+    let g:Lf_WindowPosition = 'popup'
+else
+    let g:Lf_WindowPosition = 'bottom'
+endif
 
 "plugset: vim-easy-align"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -315,7 +319,7 @@ nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 
-let g:coc_global_extensions =['coc-pairs', 'coc-json', 'coc-snippets', 'coc-python', 'coc-lists', 'coc-stylelint', 'coc-html', 'coc-css', 'coc-prettier']
+let g:coc_global_extensions =['coc-pairs', 'coc-json', 'coc-python', 'coc-lists', 'coc-stylelint', 'coc-html', 'coc-css', 'coc-prettier']
 
 "plugset: vim-go
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -351,7 +355,7 @@ nnoremap <leader>3 :UndotreeToggle<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:table_mode_corner='|'
 
-"plugst: nerdcommenter
+"plugset: nerdcommenter
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
@@ -361,7 +365,7 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
 let g:NERDAltDelims_c = 1
 
-"plugst: ultisnips
+"plugset: ultisnips
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
@@ -381,6 +385,7 @@ nnoremap <leader>qq :cclose<CR>
 nnoremap <leader>qb :bdelete<CR>
 nnoremap <leader>qw :q<CR>
 
+nnoremap <leader>e A;<ESC>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " machine-depend config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
