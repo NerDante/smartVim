@@ -1,6 +1,6 @@
 
 ## Overview
-This conifguration uses vim-plug as the plugin manager to configure vim as IDE-like tool for development C/C++, Python and Go. You can add more language support with alternative plugin.
+This conifguration uses vim-plug as the plugin manager to configure vim as IDE-like tool for development C/C++, Python, etc.
     
 ![image](https://github.com/NerDante/smartVim/blob/master/screenshot/startPage.png)
 
@@ -83,6 +83,7 @@ key                 | description
 `<c-e>`             | expand snippet
 `<c-j>`             | jump to next snippets position
 `<c-l>`             | jump to priev snippets position
+`<leader>e`         | add ';' in the end of line
 
 ## ScreenShot
 ### complete(LSP based)
