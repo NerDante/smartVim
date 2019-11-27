@@ -37,14 +37,14 @@ int main(int argc, char *argv[])
 }
 endsnippet
 
-snippet for "for loop (for)"
+snippet mfor "for loop (for)"
 for (${2:i} = 0; $2 < ${1:count}; ${3:$2++})
 {
 	${VISUAL}$0
 }
 endsnippet
 
-snippet fori "for int loop (fori)"
+snippet mfori "for int loop (fori)"
 for (${4:int} ${2:i} = 0; $2 < ${1:count}; ${3:$2++})
 {
 	${VISUAL}$0
@@ -71,30 +71,25 @@ snippet fprintf "fprintf ..."
 fprintf(${1:stderr}, "${2:%s}\n"${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%%)*(%.)?.*/(?2:\);)/}
 endsnippet
 
-snippet if "if(...){  }"
+snippet mif "if(...){  }"
 if (${1:/* condition */})
 {
 	${VISUAL}$0
 }
 endsnippet
 
-snippet el "else{  }"
+snippet mel "else{  }"
 else
 {
 	${VISUAL}$0
 }
 endsnippet
 
-snippet eli "else if .. (eli)"
+snippet meli "else if .. (eli)"
 else if (${1:/* condition */})
 {
 	${VISUAL}$0
 }
-endsnippet
-
-snippet case "case val : break"
-case ${1:case-value}:
-	break;
 endsnippet
 
 snippet printf "printf .. (printf)"
