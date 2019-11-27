@@ -6,9 +6,7 @@ let mapleader = ";"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " custom settings 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let beauty_switch=0    
-let complete_python=0     " support python autocomplete
-let complete_golang=0     " support go autocomplete
+let beauty_switch=1    
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " common
@@ -319,19 +317,16 @@ nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 
-let g:coc_global_extensions =['coc-pairs', 'coc-json', 'coc-python', 'coc-lists', 'coc-stylelint', 'coc-html', 'coc-css', 'coc-prettier']
-
-"plugset: vim-go
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if complete_golang
-    function s:golangMap()
-        noremap <leader>gd :GoDef<CR>
-        noremap <leader>gr :GoRun<CR>
-        noremap <leader>gf :GoFmt<CR>
-        noremap <leader>gm :GoImports<CR>
-    endfunction
-    autocmd FileType go call s:golangMap()
-endif
+let g:coc_global_extensions =[
+            \'coc-pairs', 
+            \'coc-json', 
+            \'coc-python', 
+            \'coc-java', 
+            \'coc-lists', 
+            \'coc-stylelint', 
+            \'coc-html', 
+            \'coc-css', 
+            \'coc-prettier']
 
 "plugset: echodoc.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
