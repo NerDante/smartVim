@@ -5,6 +5,7 @@
     "suggest.enablePreview": false,
     "suggest.echodocSupport": true,
 	"suggest.minTriggerInputLength": 2,
+    "suggest.snippetIndicator": "    ",
 
     "suggest.completionItemKindLabels": {
         "keyword": "\uf1de",
@@ -37,9 +38,9 @@
     //git
     "git.enableGutters": true,
     "git.branchCharacter":"\uf408",
-    "git.addGlameToBufferVar": true,
-    "git.addGlameToVirtualText": true,
-    "git.virtualTextPrefix": "      ❯❯ ",
+    "git.addGBlameToBufferVar": true,
+    "git.addGBlameToVirtualText": true,
+    "git.virtualTextPrefix": "              " ,
     "git.addedSign.hlGroup": "GitGutterAdd",
     "git.changedSign.hlGroup": "GitGutterChange",
     "git.removedSign.hlGroup": "GitGutterDelete",
