@@ -127,6 +127,7 @@ endif
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'luochen1990/rainbow'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -366,7 +367,10 @@ let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 
+" plugset: rainbow
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>4 :RainbowToggle<cr>
+
 "basic key map: 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap <leader>wj <c-w>j
@@ -381,6 +385,8 @@ nnoremap <leader>qb :bdelete<CR>
 nnoremap <leader>qw :q<CR>
 
 nnoremap <leader>e A;<ESC>
+nnoremap <leader>de d$<ESC>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " machine-depend config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -50,6 +50,7 @@ cd smartVim
  [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.vim)      | preview Markdown in real-time with a web browser
  [dhruvasagar/vim-table-mode](https://github.com/dhruvasagar/vim-table-mode)         | An awesome automatic table creator & formatter allowing one to create neat tables as you type
  [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)     | True Sublime Text style multiple selections for Vim
+ [luochen1990/rainbow](https://github.com/luochen1990/rainbow)                       |Rainbow Parentheses
 
 ## Keymap
 key                 | description
@@ -58,6 +59,7 @@ key                 | description
 `<leader>1`         | open/close file tree
 `<leader>2`         | open/close tagbar
 `<leader>3`         | open/close undo tree
+`<leader>4`         | open/close rainbow parenthess show
 `<leader>f`         | find files under project
 `<leader>s`         | find tags in current buff(file)
 `<leader>b`         | find opend buffer(file)
@@ -84,6 +86,7 @@ key                 | description
 `<c-j>`             | jump to next snippets position
 `<c-l>`             | jump to priev snippets position
 `<leader>e`         | add ';' in the end of line
+`<leader>de`        | delete left to end of line
 
 ## ScreenShot
 ### complete(LSP based)
