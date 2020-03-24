@@ -88,6 +88,13 @@ key                 | description
 `<leader>e`         | add ';' in the end of line
 `<leader>de`        | delete left to end of line
 
+## Useful command list
+`GV `: show git commit log
+
+`Autoformat `: format current buffer
+
+`MarkdownPreview `: preview markdwon in web browser
+
 ## ScreenShot
 ### complete(LSP based)
 ![image](https://github.com/NerDante/smartVim/blob/master/screenshot/complete.gif)
