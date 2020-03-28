@@ -39,7 +39,6 @@ cd smartVim
  [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot)                     | highlight code
  [SirVer/ultisnips](https://github.com/SirVer/ultisnips)                             | snippet
  [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion)           | powerful mothion plugin
- [Shougo/echodoc.vim](https://github.com/Shougo/echodoc.vim)                         | show function param list in commandline
  [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)                         | git support
  [junegunn/gv.vim](https://github.com/junegunn/gv.vim)                               | A git commit browser in Vim
  [fatih/vim-go](https://github.com/fatih/vim-go)                                     | many featrures support for go development
