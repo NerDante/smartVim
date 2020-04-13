@@ -367,6 +367,18 @@ let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>4 :RainbowToggle<cr>
 
+" functions define
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function ToggleWrap()
+    if (&wrap == 1)
+        set nowrap
+    else
+        set wrap
+        set linebreak
+        set breakindent
+    endif
+endfunction
+
 "basic key map: 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap <leader>wj <c-w>j
@@ -382,6 +394,7 @@ nnoremap <leader>qw :q<CR>
 
 nnoremap <leader>e A;<ESC>
 nnoremap <leader>de d$<ESC>
+map <leader>w :call ToggleWrap()<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " machine-depend config
