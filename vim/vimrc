@@ -130,6 +130,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'luochen1990/rainbow'
+Plug 't9md/vim-choosewin'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -369,6 +370,11 @@ let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>4 :RainbowToggle<cr>
 
+" plugset: vim-choosewin
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap  <leader>w  <Plug>(choosewin)
+let g:choosewin_overlay_enable = 1
+
 " functions define
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function ToggleWrap()
@@ -383,11 +389,6 @@ endfunction
 
 "basic key map: 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-noremap <leader>wj <c-w>j
-noremap <leader>wk <c-w>k
-noremap <leader>wh <c-w>h
-noremap <leader>wl <c-w>l
-
 nnoremap <leader>i <c-]>
 nnoremap <leader>o <c-o>
 nnoremap <leader>qq :cclose<CR>
@@ -396,7 +397,7 @@ nnoremap <leader>qw :q<CR>
 
 nnoremap <leader>e A;<ESC>
 nnoremap <leader>de d$<ESC>
-map <leader>w :call ToggleWrap()<CR>
+map <leader>t :call ToggleWrap()<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " machine-depend config

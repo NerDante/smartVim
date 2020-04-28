@@ -86,7 +86,7 @@ key                 | description
 `<c-l>`             | jump to priev snippets position
 `<leader>e`         | add ';' in the end of line
 `<leader>de`        | delete left to end of line
-`<leader>w`         | toggle wrap
+`<leader>t`         | toggle wrap
 
 ## Useful command list
 `GV `: show git commit log
