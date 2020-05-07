@@ -40,7 +40,7 @@
     "git.branchCharacter":"\uf408",
     "git.addGBlameToBufferVar": true,
     "git.addGBlameToVirtualText": true,
-    "git.virtualTextPrefix": "              " ,
+    "git.virtualTextPrefix": "    " ,
     "git.addedSign.hlGroup": "GitGutterAdd",
     "git.changedSign.hlGroup": "GitGutterChange",
     "git.removedSign.hlGroup": "GitGutterDelete",

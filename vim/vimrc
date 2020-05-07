@@ -336,6 +336,7 @@ let g:coc_global_extensions =[
             \'coc-stylelint', 
             \'coc-html', 
             \'coc-css', 
+            \'coc-git', 
             \'coc-prettier']
 
 "plugset: vim-polyglot
