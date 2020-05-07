@@ -15,7 +15,7 @@ This conifguration uses vim-plug as the plugin manager to configure vim as IDE-l
 ```
 git clone https://github.com/NerDante/smartVim.git
 cd smartVim
-./install.sh
+./smart install
 ```
 ## Main plugins
  plugin                                                                              | description

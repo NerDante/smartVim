@@ -1,0 +1,58 @@
+#!/bin/sh
+
+function print_usage()
+{
+    echo "Useage:"
+    echo "    $0 [install/update]"
+}
+
+function smartvim_install()
+{
+    # copy .vimrc to home path
+    cp -rf ${CURPATH}/vim ~/.vim
+    ln -s ~/.vim/vimrc ~/.vimrc
+    ln -s ~/.vim/vimrc.local ~/.vimrc.local
+
+    #for neovim
+    ln -s ~/.vim ~/.config/nvim
+    ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
+
+    #install fonts
+    if [ ${platform_type} == "Linux" ];then
+        mkdir -p ~/.local/share/fonts
+        cp  -f fonts/* ~/.local/share/fonts
+    elif [ ${platform_type} == "Darwin" ];then
+        cp  -f fonts/* ~/Library/Fonts
+    else
+        echo "not support platform type ${platform_type}"
+        exit
+    fi
+
+    vim -c "PlugInstall" -c "q" -c "q"
+}
+
+function smartvim_update()
+{
+    cp -f ${CURPATH}/vim/vimrc ~/.vim/vimrc
+    cp -f ${CURPATH}/vim/coc-settings.json ~/.vim/coc-settings.json
+
+    vim -c "PlugInstall" -c "q" -c "q"
+}
+
+# # # # excute from here # # # #
+CURPATH=`pwd`
+platform_type=`echo $(uname)`
+
+if [ $# -ne 1 ];then
+    print_usage
+    exit
+fi
+
+if [ $1 == "install" ];then
+    smartvim_install
+elif [ $1 == "update" ];then
+    smartvim_update
+else
+    print_usage
+    exit
+fi
