@@ -54,13 +54,6 @@ cd smartVim
 ## Keymap
 vim-which-key powerd, "leader key" will show you everything
 
-## Useful command list
-`GV `: show git commit log
-
-`Autoformat `: format current buffer
-
-`MarkdownPreview `: preview markdwon in web browser
-
 ## ScreenShot
 ### complete(LSP based)
 ![image](https://github.com/NerDante/smartVim/blob/master/screenshot/complete.gif)

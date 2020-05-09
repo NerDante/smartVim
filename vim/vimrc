@@ -421,6 +421,7 @@ let g:which_key_map.e = {
       \ 'a' : ['<Plug>(EasyAlign)', 'easy align'],
       \ 't' : ['ToggleWrap()',      'toggle wrap content'],
       \ 'd' : ['d$',                'delete left of line'],
+      \ 'f' : ['Autoformat',        'format current file'],
       \ }
 
 let g:which_key_map.n = {
