@@ -418,8 +418,9 @@ let g:which_key_map.q = {
 
 let g:which_key_map.e = {
       \ 'name' : '+edit-and-view' ,
-      \ 'a' : ['<Plug>(EasyAlign)'     , 'easy align'],
-      \ 't' : ['ToggleWrap()'     , 'toggle wrap content'],
+      \ 'a' : ['<Plug>(EasyAlign)', 'easy align'],
+      \ 't' : ['ToggleWrap()',      'toggle wrap content'],
+      \ 'd' : ['d$',                'delete left of line'],
       \ }
 
 let g:which_key_map.n = {
@@ -462,15 +463,6 @@ function ToggleWrap()
         set breakindent
     endif
 endfunction
-
-"basic key map: 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nnoremap <leader>i <c-]>
-" nnoremap <leader>o <c-o>
-
-" nnoremap <leader>e A;<ESC>
-nnoremap <leader>de d$<ESC>
-" map <leader>t :call ToggleWrap()<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " machine-depend config
