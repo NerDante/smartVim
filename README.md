@@ -41,7 +41,6 @@ cd smartVim
  [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion)           | powerful mothion plugin
  [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)                         | git support
  [junegunn/gv.vim](https://github.com/junegunn/gv.vim)                               | A git commit browser in Vim
- [fatih/vim-go](https://github.com/fatih/vim-go)                                     | many featrures support for go development
  [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)                           | auto complete engine support LSP
  [mbbill/undotree](https://github.com/mbbill/undotree)                               | visualizes undo history
  [lilydjwg/colorizer](https://github.com/lilydjwg/colorizer)                         | A Vim plugin to colorize all text in the form #rrggbb or #rgb
@@ -49,44 +48,11 @@ cd smartVim
  [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.vim)      | preview Markdown in real-time with a web browser
  [dhruvasagar/vim-table-mode](https://github.com/dhruvasagar/vim-table-mode)         | An awesome automatic table creator & formatter allowing one to create neat tables as you type
  [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)     | True Sublime Text style multiple selections for Vim
- [luochen1990/rainbow](https://github.com/luochen1990/rainbow)                       |Rainbow Parentheses
+ [luochen1990/rainbow](https://github.com/luochen1990/rainbow)                       | Rainbow Parentheses
+ [liuchengxu/vim-which-key](https://github.com/liuchengxu/vim-which-key)             | shows keybindings in popup
 
 ## Keymap
-key                 | description
----------           | ----------------------
-`; `                | leader key
-`<leader>1`         | open/close file tree
-`<leader>2`         | open/close tagbar
-`<leader>3`         | open/close undo tree
-`<leader>4`         | open/close rainbow parenthess show
-`<leader>f`         | find files under project
-`<leader>s`         | find tags in current buff(file)
-`<leader>b`         | find opend buffer(file)
-`<leader>gr`        | find symbol under cursor based tags
-`<leader>gd`        | find symbol definition based tags
-`gd`                | find definition based coc
-`gy`                | find type-definition based coc
-`gi`                | find implementation based coc
-`gr`                | find references based coc
-`<leader>ci`        | comment/uncomment, just in visual mode
-`<leader>cs`        | comment in pretty way, just in visual mode
-`<leader>wh`        | window navigate
-`<leader>wj`        | window navigate
-`<leader>wk`        | window navigate
-`<leader>wl`        | window navigate
-`<leader>qq`        | close quickfix window
-`<leader>qb`        | close current buffer
-`<leader>m`         | highlight word under cursor with different colors
-`<leader><leader>w` | easy motion forward
-`<leader><leader>b` | easy motion backword
-`<c-d>`             | scroll one page down
-`<c-u>`             | scroll one page up
-`<c-e>`             | expand snippet
-`<c-j>`             | jump to next snippets position
-`<c-l>`             | jump to priev snippets position
-`<leader>e`         | add ';' in the end of line
-`<leader>de`        | delete left to end of line
-`<leader>t`         | toggle wrap
+vim-which-key powerd, "leader key" will show you everything
 
 ## Useful command list
 `GV `: show git commit log
