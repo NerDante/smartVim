@@ -393,15 +393,13 @@ let g:which_key_map.2 = 'toggle-tagbar'
 let g:which_key_map.3 = 'undotree'
 let g:which_key_map.4 = 'rainbow-braces'
 let g:which_key_map.f = 'Find-file'
-let g:which_key_map.b = 'find-opened-files'
+let g:which_key_map.b = 'choose-opened-files'
 let g:which_key_map.s = 'symbol-of-currentbuffer'
 let g:which_key_map.a = 'symbol-of-project'
 let g:which_key_map.m = 'mark-current-symbol'
 let g:which_key_map.w = 'choosewin(split)'
 
-" TODO: edit related, easy alian
-
-let g:which_key_map.g = { 'name' : '+goto/jump to'  }
+let g:which_key_map.g = { 'name' : '+goto'  }
 let g:which_key_map.g.d = 'definition'
 let g:which_key_map.g.r = 'references'
 let g:which_key_map.g.y = 'type-definition'
@@ -409,6 +407,7 @@ let g:which_key_map.g.i = 'implementation'
 let g:which_key_map.g.f = 'symbol-according-tag'
 
 let g:which_key_map.c = { 'name' : '+comment'  }
+let g:which_key_map.t = { 'name' : '+table-mode' }
 
 let g:which_key_map.q = {
       \ 'name' : '+close' ,
@@ -418,9 +417,9 @@ let g:which_key_map.q = {
       \ }
 
 let g:which_key_map.e = {
-      \ 'name' : '+edit & view' ,
+      \ 'name' : '+edit-and-view' ,
       \ 'a' : ['<Plug>(EasyAlign)'     , 'easy align'],
-      \ 't' : ['ToggleWrap()'     , 'toggle wrap'],
+      \ 't' : ['ToggleWrap()'     , 'toggle wrap content'],
       \ }
 
 let g:which_key_map.n = {
@@ -439,6 +438,18 @@ let g:which_key_map.j = {
       \ 'h' : ['<Plug>(easymotion-linebackward)'  , 'line backward'],
       \ }
 
+let g:which_key_map.x = {
+      \ 'name' : '+Git' ,
+      \ 'l' : [':GV'        , 'logs'],
+      \ 'c' : [':GV!'       , 'logs include current file'],
+      \ 's' : [':Gstatus'   , 'git status'],
+      \ 'd' : [':Gdiffsplit', 'git diff'],
+      \ 'r' : [':Gread'     , 'git checkout current file'],
+      \ 'q' : ['q'          , 'close'],
+      \ }
+
+"hided maps
+let g:which_key_map.r = "which_key_ignore"
 
 " functions define
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
