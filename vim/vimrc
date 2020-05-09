@@ -1,7 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " leader key 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader = ";" 
+let mapleader = ";"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " custom settings 
@@ -103,7 +103,6 @@ Plug 'mhinz/vim-startify'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/gutentags_plus'
 
-Plug 'skywind3000/vim-preview'
 Plug 'Yggdroot/vim-mark'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/DoxygenToolkit.vim'
@@ -131,6 +130,7 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'luochen1990/rainbow'
 Plug 't9md/vim-choosewin'
+Plug 'liuchengxu/vim-which-key'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -200,8 +200,9 @@ let g:Lf_DevIconsFont = "DejaVuSansMono Nerd Font Mono"
 
 "plugset: vim-easy-align"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)"
+" Move to vim-which-key  map
+" xmap ga <Plug>(EasyAlign)
+" nmap ga <Plug>(EasyAlign)"
 
 "plugset: startify"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -244,13 +245,8 @@ let g:gutentags_auto_add_gtags_cscope = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gutentags_plus_switch = 1
 let g:gutentags_plus_nomap = 1
-noremap <silent> <leader>gr :GscopeFind s <C-R><C-W><cr>   "Find symbol(reference) under cursor"
-noremap <silent> <leader>gd :GscopeFind g <C-R><C-W><cr>   "Find symbol definition under cursor"
-
-"plugset: vim-preview
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr> "p open preview window
-autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr> "P close preview window
+noremap <silent> <leader>gf :GscopeFind s <C-R><C-W><cr>   "Find symbol(reference) under cursor"
+" noremap <silent> <leader>gd :GscopeFind g <C-R><C-W><cr>   "Find symbol definition under cursor"
 
 "plugset : coc.vim 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -291,10 +287,10 @@ nmap <silent> [c <Plug>(coc-diagnostic-prev)
 nmap <silent> ]c <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <leader>gd <Plug>(coc-definition)
+nmap <silent> <leader>gy <Plug>(coc-type-definition)
+nmap <silent> <leader>gi <Plug>(coc-implementation)
+nmap <silent> <leader>gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -309,9 +305,6 @@ endfunction
 
 " Highlight symbol under cursor on CursorHold
 "autocmd CursorHold * silent call CocActionAsync('highlight')
-
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
 
 " Use <tab> for select selections ranges, needs server support, like: coc-tsserver, coc-python
 nmap <silent> <TAB> <Plug>(coc-range-select)
@@ -357,6 +350,11 @@ nnoremap <leader>3 :UndotreeToggle<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:table_mode_corner='|'
 
+"plugset: easymotion
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:EasyMotion_do_mapping = 0 
+let g:EasyMotion_smartcase = 1
+
 "plugset: nerdcommenter
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDSpaceDelims = 1
@@ -382,6 +380,66 @@ nnoremap <leader>4 :RainbowToggle<cr>
 nmap  <leader>w  <Plug>(choosewin)
 let g:choosewin_overlay_enable = 1
 
+" plugset: vim-which-key
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set timeoutlen=300
+call which_key#register(';', "g:which_key_map")
+nnoremap <silent> <leader> :<c-u>WhichKey ";"<CR>
+vnoremap <silent> <leader> :<c-u>WhichKeyVisual ";"<CR>
+
+let g:which_key_map =  {}
+let g:which_key_map.1 = 'file-explorer'
+let g:which_key_map.2 = 'toggle-tagbar'
+let g:which_key_map.3 = 'undotree'
+let g:which_key_map.4 = 'rainbow-braces'
+let g:which_key_map.f = 'Find-file'
+let g:which_key_map.b = 'find-opened-files'
+let g:which_key_map.s = 'symbol-of-currentbuffer'
+let g:which_key_map.a = 'symbol-of-project'
+let g:which_key_map.m = 'mark-current-symbol'
+let g:which_key_map.w = 'choosewin(split)'
+
+" TODO: edit related, easy alian
+
+let g:which_key_map.g = { 'name' : '+goto/jump to'  }
+let g:which_key_map.g.d = 'definition'
+let g:which_key_map.g.r = 'references'
+let g:which_key_map.g.y = 'type-definition'
+let g:which_key_map.g.i = 'implementation'
+let g:which_key_map.g.f = 'symbol-according-tag'
+
+let g:which_key_map.c = { 'name' : '+comment'  }
+
+let g:which_key_map.q = {
+      \ 'name' : '+close' ,
+      \ 'q' : ['cclose'     , 'close quicfix'] ,
+      \ 'b' : ['bdelete'    , 'close current buffer'] ,
+      \ 'w' : ['q'          , 'close window'] ,
+      \ }
+
+let g:which_key_map.e = {
+      \ 'name' : '+edit & view' ,
+      \ 'a' : ['<Plug>(EasyAlign)'     , 'easy align'],
+      \ 't' : ['ToggleWrap()'     , 'toggle wrap'],
+      \ }
+
+let g:which_key_map.n = {
+      \ 'name' : '+Navigate' ,
+      \ 'i' : ['<c-]>'     , 'into'],
+      \ 'o' : ['<c-o>'     , 'back'],
+      \ }
+
+let g:which_key_map.j = {
+      \ 'name' : '+easymotion' ,
+      \ 's' : ['<Plug>(easymotion-s)'             , 'Move to character'],
+      \ 'w' : ['<Plug>(easymotion-sn)'            , 'Move to word'],
+      \ 'd' : ['<Plug>(easymotion-j)'             , 'below(line)'],
+      \ 'u' : ['<Plug>(easymotion-k)'             , 'up(line)'],
+      \ 'l' : ['<Plug>(easymotion-lineforward)'   , 'line forward'],
+      \ 'h' : ['<Plug>(easymotion-linebackward)'  , 'line backward'],
+      \ }
+
+
 " functions define
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function ToggleWrap()
@@ -396,15 +454,12 @@ endfunction
 
 "basic key map: 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>i <c-]>
-nnoremap <leader>o <c-o>
-nnoremap <leader>qq :cclose<CR>
-nnoremap <leader>qb :bdelete<CR>
-nnoremap <leader>qw :q<CR>
+" nnoremap <leader>i <c-]>
+" nnoremap <leader>o <c-o>
 
-nnoremap <leader>e A;<ESC>
+" nnoremap <leader>e A;<ESC>
 nnoremap <leader>de d$<ESC>
-map <leader>t :call ToggleWrap()<CR>
+" map <leader>t :call ToggleWrap()<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " machine-depend config
