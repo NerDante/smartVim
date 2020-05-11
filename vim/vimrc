@@ -422,13 +422,10 @@ let g:which_key_map.e = {
       \ 't' : ['ToggleWrap()',      'toggle wrap content'],
       \ 'd' : ['d$',                'delete left of line'],
       \ 'f' : ['Autoformat',        'format current file'],
+      \ '.' : ['<c-]>',             'into'],
+      \ ',' : ['<c-o>',             'back'],
       \ }
 
-let g:which_key_map.n = {
-      \ 'name' : '+Navigate' ,
-      \ 'i' : ['<c-]>'     , 'into'],
-      \ 'o' : ['<c-o>'     , 'back'],
-      \ }
 
 let g:which_key_map.j = {
       \ 'name' : '+easymotion' ,
@@ -449,6 +446,7 @@ let g:which_key_map.x = {
       \ 'r' : [':Gread'     , 'git checkout current file'],
       \ 'q' : ['q'          , 'close'],
       \ }
+
 
 "hided maps
 let g:which_key_map.r = "which_key_ignore"
