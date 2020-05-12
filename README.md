@@ -3,9 +3,16 @@
 This conifguration uses vim-plug as the plugin manager to configure vim as IDE-like tool for development C/C++, Python, etc.
     
 ![image](https://github.com/NerDante/smartVim/blob/master/screenshot/startPage.png)
+- Support LSP by [coc.nvim](https://github.com/neoclide/coc.nvim), auto completion as IDE
+- Fast fuzzy search buffer/file/tag, powered by [LeaderF](https://github.com/Yggdroot/LeaderF)
+- Beautiful UI
+- No need remember all the key bindings, <leader> key will popup all of choices
+- Variety of edit features: tabble mode, multiline edit, easy motion, easy align
+
 
 ## Required
 - vim verison > 8.0 (asynchronous completion)
+- [universal-ctags](https://github.com/universal-ctags/ctags) (tagbar)
 - [gtags](https://www.gnu.org/software/global)
 - [python](https://www.python.org) (leaderF)
 - [nodejs](https://nodejs.org/en/)
@@ -32,7 +39,6 @@ cd smartVim
  [mhinz/vim-startify](https://github.com/mhinz/vim-startify)                         | startpage for vim
  [ludovicchabant/vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)     | manage file tags
  [skywind3000/gutentags_plus](https://github.com/skywind3000/gutentags_plus)         | Gutentags_plus works with gutentags and provides seemless databases switching
- [skywind3000/vim-preview](https://github.com/skywind3000/vim-preview)               | The missing preview window for vim
  [Yggdroot/vim-mark](https://github.com/Yggdroot/vim-mark)                           | mark/unmark world uner the cursor
  [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)             | for comment
  [vim-scripts/DoxygenToolkit.vim](https://github.com/vim-scripts/DoxygenToolkit.vim) | for generate doc
