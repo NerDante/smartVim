@@ -246,7 +246,7 @@ let g:gutentags_auto_add_gtags_cscope = 0
 let g:gutentags_plus_switch = 1
 let g:gutentags_plus_nomap = 1
 noremap <silent> <leader>gf :GscopeFind s <C-R><C-W><cr>   "Find symbol(reference) under cursor"
-" noremap <silent> <leader>gd :GscopeFind g <C-R><C-W><cr>   "Find symbol definition under cursor"
+noremap <silent> <leader>gg :GscopeFind g <C-R><C-W><cr>   "Find symbol definition under cursor"
 
 "plugset : coc.vim 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -404,7 +404,9 @@ let g:which_key_map.g.d = 'definition'
 let g:which_key_map.g.r = 'references'
 let g:which_key_map.g.y = 'type-definition'
 let g:which_key_map.g.i = 'implementation'
-let g:which_key_map.g.f = 'symbol-according-tag'
+
+let g:which_key_map.g.f = 'reference-tagbased'
+let g:which_key_map.g.g = 'definition-tagbased'
 
 let g:which_key_map.c = { 'name' : '+comment'  }
 let g:which_key_map.t = { 'name' : '+table-mode' }
@@ -428,11 +430,11 @@ let g:which_key_map.e = {
 
 
 let g:which_key_map.j = {
-      \ 'name' : '+easymotion' ,
+      \ 'name' : '+Jump' ,
       \ 's' : ['<Plug>(easymotion-s)'             , 'Move to character'],
       \ 'w' : ['<Plug>(easymotion-sn)'            , 'Move to word'],
-      \ 'd' : ['<Plug>(easymotion-j)'             , 'below(line)'],
-      \ 'u' : ['<Plug>(easymotion-k)'             , 'up(line)'],
+      \ 'j' : ['<Plug>(easymotion-j)'             , 'below(line)'],
+      \ 'k' : ['<Plug>(easymotion-k)'             , 'up(line)'],
       \ 'l' : ['<Plug>(easymotion-lineforward)'   , 'line forward'],
       \ 'h' : ['<Plug>(easymotion-linebackward)'  , 'line backward'],
       \ }
@@ -446,7 +448,6 @@ let g:which_key_map.x = {
       \ 'r' : [':Gread'     , 'git checkout current file'],
       \ 'q' : ['q'          , 'close'],
       \ }
-
 
 "hided maps
 let g:which_key_map.r = "which_key_ignore"
