@@ -169,10 +169,6 @@ else
     let g:airline_right_alt_sep = ''
 endif
 
-"plugset: nerdtree
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <leader>1 :NERDTreeToggle<CR>
-
 "plugset: LeaderF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>b :LeaderfBuffer<cr>
@@ -196,13 +192,6 @@ let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "DejaVu S
 let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
 let g:Lf_ShowDevIcons = 1
 let g:Lf_DevIconsFont = "DejaVuSansMono Nerd Font Mono"
-
-
-"plugset: vim-easy-align"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Move to vim-which-key  map
-" xmap ga <Plug>(EasyAlign)
-" nmap ga <Plug>(EasyAlign)"
 
 "plugset: startify"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -338,13 +327,8 @@ let g:polyglot_disabled = ['markdown']
 
 "plugset: tagbar
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <leader>2 :TagbarToggle<CR>
 let g:tagbar_sort = 0
 let g:tagbar_left = 0
-
-"plugset: undotree
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>3 :UndotreeToggle<cr>
 
 "plugset: vim-table-mode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -371,13 +355,8 @@ let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 
-" plugset: rainbow
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>4 :RainbowToggle<cr>
-
 " plugset: vim-choosewin
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap  <leader>w  <Plug>(choosewin)
 let g:choosewin_overlay_enable = 1
 
 " plugset: vim-which-key
@@ -388,16 +367,11 @@ nnoremap <silent> <leader> :<c-u>WhichKey ";"<CR>
 vnoremap <silent> <leader> :<c-u>WhichKeyVisual ";"<CR>
 
 let g:which_key_map =  {}
-let g:which_key_map.1 = 'file-explorer'
-let g:which_key_map.2 = 'toggle-tagbar'
-let g:which_key_map.3 = 'undotree'
-let g:which_key_map.4 = 'rainbow-braces'
 let g:which_key_map.f = 'Find-file'
 let g:which_key_map.b = 'choose-opened-files'
 let g:which_key_map.s = 'symbol-of-currentbuffer'
 let g:which_key_map.a = 'symbol-of-project'
 let g:which_key_map.m = 'mark-current-symbol'
-let g:which_key_map.w = 'choosewin(split)'
 
 let g:which_key_map.g = { 'name' : '+goto'  }
 let g:which_key_map.g.d = 'definition'
@@ -421,6 +395,7 @@ let g:which_key_map.q = {
 let g:which_key_map.e = {
       \ 'name' : '+edit-and-view' ,
       \ 'a' : ['<Plug>(EasyAlign)', 'easy align'],
+      \ 'r' : [':RainbowToggle',    'toggle rainbow braces'],
       \ 't' : ['ToggleWrap()',      'toggle wrap content'],
       \ 'd' : ['d$',                'delete left of line'],
       \ 'f' : ['Autoformat',        'format current file'],
@@ -428,6 +403,20 @@ let g:which_key_map.e = {
       \ ',' : ['<c-o>',             'back'],
       \ }
 
+let g:which_key_map.w = {
+      \ 'name' : '+window' ,
+      \ 'e' : [':NERDTreeToggle',   'explorer window toggle'] ,
+      \ 't' : [':TagbarToggle',     'tagbar toggle'] ,
+      \ 'u' : [':UndotreeToggle',   'undotree toggle'] ,
+      \ 'j' : ['<c-w>j',            'move down'] ,
+      \ 'k' : ['<c-w>k',            'move up'] ,
+      \ 'l' : ['<c-w>l',            'move right'] ,
+      \ 'h' : ['<c-w>h',            'move left'] ,
+      \ 's' : [':split',            'split vertical'] ,
+      \ 'v' : [':vsplit',           'split horizontal'] ,
+      \ 'w' : ['<Plug>(choosewin)', 'select window'] ,
+      \ 'q' : [':q',                'close window'] ,
+      \ }
 
 let g:which_key_map.j = {
       \ 'name' : '+Jump' ,
