@@ -91,7 +91,6 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
 Plug 'NerDante/smartColors'
-
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
@@ -99,20 +98,15 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
 Plug 'Yggdroot/indentLine'
 Plug 'mhinz/vim-startify'
-
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/gutentags_plus'
-
 Plug 'Yggdroot/vim-mark'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/DoxygenToolkit.vim'
-
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 Plug 'easymotion/vim-easymotion'
 Plug 'Chiel92/vim-autoformat'
 Plug 'majutsushi/tagbar'
@@ -171,10 +165,9 @@ endif
 
 "plugset: LeaderF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>b :LeaderfBuffer<cr>
-nnoremap <leader>s :LeaderfBufTag<cr>
-nnoremap <leader>a :LeaderfTag<cr>
-let g:Lf_ShortcutF = '<leader>f' "find in current project directory
+let g:Lf_ShortcutF = '<leader>ff' "find in current project directory
+let g:Lf_ShortcutB = '<leader>fb'
+let g:Lf_WindowHeight = 0.70
 let g:Lf_WildIgnore = { 
             \ 'dir': ['.svn','.git','.hg','.vscode','.wine','.deepinwine','.oh-my-zsh','.clangd', '.clangx'],
             \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
@@ -360,7 +353,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 let g:choosewin_overlay_enable = 1
 let g:choosewin_statusline_replace = 1
 
-" plugset: vim-which-key
+" plugset: vim-which-key  && Main key mapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set timeoutlen=300
 call which_key#register(';', "g:which_key_map")
@@ -368,33 +361,44 @@ nnoremap <silent> <leader> :<c-u>WhichKey ";"<CR>
 vnoremap <silent> <leader> :<c-u>WhichKeyVisual ";"<CR>
 
 let g:which_key_map =  {}
-let g:which_key_map.f = 'Find-file'
-let g:which_key_map.b = 'choose-opened-files'
-let g:which_key_map.s = 'symbol-of-currentbuffer'
-let g:which_key_map.a = 'symbol-of-project'
-let g:which_key_map.m = 'mark-current-symbol'
 
 nnoremap <silent> <leader>, <c-o>
 let g:which_key_map[','] = '<== back'
+
+let g:which_key_map.e = {
+      \ 'name' : '+edit' ,
+      \ 'a' : ['<Plug>(EasyAlign)', 'easy align'],
+      \ 'd' : ['d$',                'delete left of line'],
+      \ 'f' : ['Autoformat',        'format current file'],
+      \ }
+
+let g:which_key_map.f = {
+      \ 'name' : '+find' ,
+      \ 'f' : [':LeaderfFile',   'file in project'] ,
+      \ 'b' : [':LeaderfBuffer', 'opened buffer'] ,
+      \ 't' : [':LeaderfBufTag', 'tag of current file'] ,
+      \ 'a' : [':LeaderfTag',    'tag of project'] ,
+      \ }
 
 let g:which_key_map.g = { 'name' : '+goto'  }
 let g:which_key_map.g.d = 'definition'
 let g:which_key_map.g.r = 'references'
 let g:which_key_map.g.y = 'type-definition'
 let g:which_key_map.g.i = 'implementation'
-
 let g:which_key_map.g.f = 'reference-tagbased'
 let g:which_key_map.g.g = 'definition-tagbased'
 
 let g:which_key_map.c = { 'name' : '+comment'  }
-let g:which_key_map.t = { 'name' : '+table-mode' }
-
+let g:which_key_map.m = 'mark-current-symbol'
 
 let g:which_key_map.o = {
       \ 'name' : '+open' ,
-      \ 's' : [':Startify', 'startify'],
-      \ 'c' : [':CocConfig', 'coc config'],
-      \ 'v' : [':edit ~/.vimrc', 'vim config'],
+      \ 'c' : [':CocConfig',      'coc config'],
+      \ 'e' : [':NERDTreeToggle', 'explorer window toggle'] ,
+      \ 's' : [':Startify',       'startify'],
+      \ 't' : [':TagbarToggle',   'tagbar toggle'] ,
+      \ 'u' : [':UndotreeToggle', 'undotree toggle'] ,
+      \ 'v' : [':edit ~/.vimrc',  'vim config'],
       \ }
 
 let g:which_key_map.q = {
@@ -403,13 +407,7 @@ let g:which_key_map.q = {
       \ 'b' : ['bdelete', 'close current buffer'] ,
       \ 'w' : ['q',       'close window'] ,
       \ }
-
-let g:which_key_map.e = {
-      \ 'name' : '+edit' ,
-      \ 'a' : ['<Plug>(EasyAlign)', 'easy align'],
-      \ 'd' : ['d$',                'delete left of line'],
-      \ 'f' : ['Autoformat',        'format current file'],
-      \ }
+let g:which_key_map.t = { 'name' : '+table-mode' }
 
 let g:which_key_map.v = {
       \ 'name' : '+view' ,
@@ -419,12 +417,9 @@ let g:which_key_map.v = {
 
 let g:which_key_map.w = {
       \ 'name' : '+window' ,
-      \ 'e' : [':NERDTreeToggle',   'explorer window toggle'] ,
       \ 'a' : ['<c-w>5+',           'expand current split'] ,
       \ 'd' : ['<c-w>5-',           'reduce current split'] ,
       \ '=' : ['<c-w>=',            'resize split'] ,
-      \ 't' : [':TagbarToggle',     'tagbar toggle'] ,
-      \ 'u' : [':UndotreeToggle',   'undotree toggle'] ,
       \ 'j' : ['<c-w>j',            'move down'] ,
       \ 'k' : ['<c-w>k',            'move up'] ,
       \ 'l' : ['<c-w>l',            'move right'] ,
