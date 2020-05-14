@@ -358,6 +358,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 " plugset: vim-choosewin
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:choosewin_overlay_enable = 1
+let g:choosewin_statusline_replace = 1
 
 " plugset: vim-which-key
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -373,6 +374,9 @@ let g:which_key_map.s = 'symbol-of-currentbuffer'
 let g:which_key_map.a = 'symbol-of-project'
 let g:which_key_map.m = 'mark-current-symbol'
 
+nnoremap <silent> <leader>, <c-o>
+let g:which_key_map[','] = '<== back'
+
 let g:which_key_map.g = { 'name' : '+goto'  }
 let g:which_key_map.g.d = 'definition'
 let g:which_key_map.g.r = 'references'
@@ -385,9 +389,17 @@ let g:which_key_map.g.g = 'definition-tagbased'
 let g:which_key_map.c = { 'name' : '+comment'  }
 let g:which_key_map.t = { 'name' : '+table-mode' }
 
+
+let g:which_key_map.o = {
+      \ 'name' : '+open' ,
+      \ 's' : [':Startify', 'startify'],
+      \ 'c' : [':CocConfig', 'coc config'],
+      \ 'v' : [':edit ~/.vimrc', 'vim config'],
+      \ }
+
 let g:which_key_map.q = {
       \ 'name' : '+close' ,
-      \ 'q' : ['cclose',  'close quicfix'] ,
+      \ 'q' : ['cclose',  'close quickfix'] ,
       \ 'b' : ['bdelete', 'close current buffer'] ,
       \ 'w' : ['q',       'close window'] ,
       \ }
@@ -432,8 +444,6 @@ let g:which_key_map.j = {
       \ 'k' : ['<Plug>(easymotion-k)',            'up(line)'],
       \ 'l' : ['<Plug>(easymotion-lineforward)',  'line forward'],
       \ 'h' : ['<Plug>(easymotion-linebackward)', 'line backward'],
-      \ '.' : ['<c-]>',                           'into tag'],
-      \ ',' : ['<c-o>',                           'back to last position'],
       \ }
 
 let g:which_key_map.x = {
