@@ -387,25 +387,30 @@ let g:which_key_map.t = { 'name' : '+table-mode' }
 
 let g:which_key_map.q = {
       \ 'name' : '+close' ,
-      \ 'q' : ['cclose'     , 'close quicfix'] ,
-      \ 'b' : ['bdelete'    , 'close current buffer'] ,
-      \ 'w' : ['q'          , 'close window'] ,
+      \ 'q' : ['cclose',  'close quicfix'] ,
+      \ 'b' : ['bdelete', 'close current buffer'] ,
+      \ 'w' : ['q',       'close window'] ,
       \ }
 
 let g:which_key_map.e = {
-      \ 'name' : '+edit-and-view' ,
+      \ 'name' : '+edit' ,
       \ 'a' : ['<Plug>(EasyAlign)', 'easy align'],
-      \ 'r' : [':RainbowToggle',    'toggle rainbow braces'],
-      \ 't' : ['ToggleWrap()',      'toggle wrap content'],
       \ 'd' : ['d$',                'delete left of line'],
       \ 'f' : ['Autoformat',        'format current file'],
-      \ '.' : ['<c-]>',             'into'],
-      \ ',' : ['<c-o>',             'back'],
+      \ }
+
+let g:which_key_map.v = {
+      \ 'name' : '+view' ,
+      \ 'r' : [':RainbowToggle',    'toggle rainbow braces'],
+      \ 't' : ['ToggleWrap()',      'toggle wrap content'],
       \ }
 
 let g:which_key_map.w = {
       \ 'name' : '+window' ,
       \ 'e' : [':NERDTreeToggle',   'explorer window toggle'] ,
+      \ 'a' : ['<c-w>5+',           'expand current split'] ,
+      \ 'd' : ['<c-w>5-',           'reduce current split'] ,
+      \ '=' : ['<c-w>=',            'resize split'] ,
       \ 't' : [':TagbarToggle',     'tagbar toggle'] ,
       \ 'u' : [':UndotreeToggle',   'undotree toggle'] ,
       \ 'j' : ['<c-w>j',            'move down'] ,
@@ -416,26 +421,29 @@ let g:which_key_map.w = {
       \ 'v' : [':vsplit',           'split horizontal'] ,
       \ 'w' : ['<Plug>(choosewin)', 'select window'] ,
       \ 'q' : [':q',                'close window'] ,
+      \ 'c' : ['BufCloseOthers()',  'close other buffer'] ,
       \ }
 
 let g:which_key_map.j = {
       \ 'name' : '+Jump' ,
-      \ 's' : ['<Plug>(easymotion-s)'             , 'Move to character'],
-      \ 'w' : ['<Plug>(easymotion-sn)'            , 'Move to word'],
-      \ 'j' : ['<Plug>(easymotion-j)'             , 'below(line)'],
-      \ 'k' : ['<Plug>(easymotion-k)'             , 'up(line)'],
-      \ 'l' : ['<Plug>(easymotion-lineforward)'   , 'line forward'],
-      \ 'h' : ['<Plug>(easymotion-linebackward)'  , 'line backward'],
+      \ 's' : ['<Plug>(easymotion-s)',            'Move to character'],
+      \ 'w' : ['<Plug>(easymotion-sn)',           'Move to word'],
+      \ 'j' : ['<Plug>(easymotion-j)',            'below(line)'],
+      \ 'k' : ['<Plug>(easymotion-k)',            'up(line)'],
+      \ 'l' : ['<Plug>(easymotion-lineforward)',  'line forward'],
+      \ 'h' : ['<Plug>(easymotion-linebackward)', 'line backward'],
+      \ '.' : ['<c-]>',                           'into tag'],
+      \ ',' : ['<c-o>',                           'back to last position'],
       \ }
 
 let g:which_key_map.x = {
       \ 'name' : '+Git' ,
-      \ 'l' : [':GV'        , 'logs'],
-      \ 'c' : [':GV!'       , 'logs include current file'],
-      \ 's' : [':Gstatus'   , 'git status'],
+      \ 'l' : [':GV',         'logs'],
+      \ 'c' : [':GV!',        'logs include current file'],
+      \ 's' : [':Gstatus',    'git status'],
       \ 'd' : [':Gdiffsplit', 'git diff'],
-      \ 'r' : [':Gread'     , 'git checkout current file'],
-      \ 'q' : ['q'          , 'close'],
+      \ 'r' : [':Gread',      'git checkout current file'],
+      \ 'q' : ['q',           'close'],
       \ }
 
 "hided maps
@@ -443,7 +451,7 @@ let g:which_key_map.r = "which_key_ignore"
 
 " functions define
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function ToggleWrap()
+function! ToggleWrap()
     if (&wrap == 1)
         set nowrap
     else
@@ -451,6 +459,18 @@ function ToggleWrap()
         set linebreak
         set breakindent
     endif
+endfunction
+
+function! BufCloseOthers()
+    let l:currentBufNum = bufnr("%")
+    let l:alternateBufNum = bufnr("#")
+    for i in range(1, bufnr("$"))
+        if buflisted(i)
+            if i != l:currentBufNum
+                execute("bdelete".i)
+            endif
+        endif
+    endfor
 endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
