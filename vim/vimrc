@@ -120,7 +120,7 @@ if beauty_switch
 endif
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-" Plug 'dhruvasagar/vim-table-mode'
+Plug 'dhruvasagar/vim-table-mode'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'luochen1990/rainbow'
 Plug 't9md/vim-choosewin'
@@ -334,8 +334,11 @@ let g:tagbar_left = 0
 
 "plugset: vim-table-mode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:table_mode_corner='|'
-" let g:table_mode_disable_mappings = 1
+let g:table_mode_corner='|'
+let g:table_mode_disable_mappings = 1
+let g:table_mode_disable_tableize_mappings = 1
+let g:table_mode_map_prefix = '<Leader>e'
+let g:table_mode_toggle_map = 't'
 
 "plugset: easymotion
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -407,6 +410,7 @@ let g:which_key_map.e = {
       \ ' ' : ['<Plug>(EasyAlign)', 'easy align'],
       \ 'd' : ['d$',                'delete left of line'],
       \ 'f' : ['Autoformat',        'format current file'],
+      \ 't' : [':TableModeToggle',   'table mode toggle'],
       \ }
 
 let g:which_key_map.f = {
