@@ -120,7 +120,7 @@ if beauty_switch
 endif
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-Plug 'dhruvasagar/vim-table-mode'
+" Plug 'dhruvasagar/vim-table-mode'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'luochen1990/rainbow'
 Plug 't9md/vim-choosewin'
@@ -334,7 +334,8 @@ let g:tagbar_left = 0
 
 "plugset: vim-table-mode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:table_mode_corner='|'
+" let g:table_mode_corner='|'
+" let g:table_mode_disable_mappings = 1
 
 "plugset: easymotion
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -350,6 +351,9 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
 let g:NERDAltDelims_c = 1
+let g:NERDCreateDefaultMappings = 0
+nmap <leader>c <plug>NERDCommenterToggle
+vmap <leader>c <plug>NERDCommenterToggle
 
 "plugset: ultisnips
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -362,6 +366,10 @@ let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 let g:choosewin_overlay_enable = 1
 let g:choosewin_statusline_replace = 1
 
+" plugset: colorizer
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:colorizer_nomap = 1
+
 " plugset: vim-which-key  && Main key mapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call which_key#register(';', "g:which_key_map")
@@ -372,6 +380,8 @@ set timeoutlen=300
 let g:which_key_map =  {}
 nnoremap <silent> <leader>, <c-o>
 let g:which_key_map[','] = '<== back'
+nnoremap <leader>; :LeaderfBufTag<cr>
+let g:which_key_map[';'] = 'tag-of-current'
 
 let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
@@ -389,6 +399,8 @@ let g:which_key_map.b = {
       \ 'c' : [':bdelete',       'close'],
       \ 'p' : [':bprevious',     'previous'],
       \ }
+
+let g:which_key_map.c = 'comment-toggle'
 
 let g:which_key_map.e = {
       \ 'name' : '+edit' ,
@@ -413,7 +425,6 @@ let g:which_key_map.g.i = 'implementation'
 let g:which_key_map.g.f = 'reference-tagbased'
 let g:which_key_map.g.g = 'definition-tagbased'
 
-let g:which_key_map.c = { 'name' : '+comment'  }
 let g:which_key_map.m = 'mark-current-symbol'
 
 let g:which_key_map.o = {
@@ -432,12 +443,12 @@ let g:which_key_map.q = {
       \ 'b' : ['bdelete', 'close current buffer'] ,
       \ 'w' : ['q',       'close window'] ,
       \ }
-let g:which_key_map.t = { 'name' : '+table-mode' }
 
 let g:which_key_map.v = {
       \ 'name' : '+view' ,
       \ 'r' : [':RainbowToggle',    'toggle rainbow braces'],
       \ 't' : ['ToggleWrap()',      'toggle wrap content'],
+      \ 'c' : [':ColorToggle',      'toggle hex-color highlight'],
       \ }
 
 let g:which_key_map.w = {
