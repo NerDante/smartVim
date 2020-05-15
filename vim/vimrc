@@ -143,10 +143,19 @@ colorscheme gruvbox
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "let g:airline_theme="onedark" "open if colorscheme not support vim-airline
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1 "show tab
-let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#virtualenv#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#buffer_nr_show = 0
+let g:airline#extensions#tabline#fnametruncate = 16
+let g:airline#extensions#tabline#fnamecollapse = 2
+let g:airline#extensions#tabline#buffer_idx_mode = 1"
+
+
 if !exists('g:airline_symbols')
    let g:airline_symbols = {}
 endif
@@ -355,19 +364,35 @@ let g:choosewin_statusline_replace = 1
 
 " plugset: vim-which-key  && Main key mapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set timeoutlen=300
 call which_key#register(';', "g:which_key_map")
 nnoremap <silent> <leader> :<c-u>WhichKey ";"<CR>
 vnoremap <silent> <leader> :<c-u>WhichKeyVisual ";"<CR>
+set timeoutlen=300
 
 let g:which_key_map =  {}
-
 nnoremap <silent> <leader>, <c-o>
 let g:which_key_map[','] = '<== back'
 
+let g:which_key_map.b = {
+      \ 'name' : '+buffer' ,
+      \ ' ' : [':bNext',         'next'],
+      \ '1' : ['BufSwitch(1)',   'switch to tab-1'],
+      \ '2' : ['BufSwitch(2)',   'switch to tab-2'],
+      \ '3' : ['BufSwitch(3)',   'switch to tab-3'],
+      \ '4' : ['BufSwitch(4)',   'switch to tab-4'],
+      \ '5' : ['BufSwitch(5)',   'switch to tab-5'],
+      \ '6' : ['BufSwitch(6)',   'switch to tab-6'],
+      \ '7' : ['BufSwitch(7)',   'switch to tab-7'],
+      \ '8' : ['BufSwitch(8)',   'switch to tab-8'],
+      \ '9' : ['BufSwitch(9)',   'switch to tab-9'],
+      \ 'b' : [':LeaderfBuffer', 'switch buffer'],
+      \ 'c' : [':bdelete',       'close'],
+      \ 'p' : [':bprevious',     'previous'],
+      \ }
+
 let g:which_key_map.e = {
       \ 'name' : '+edit' ,
-      \ 'a' : ['<Plug>(EasyAlign)', 'easy align'],
+      \ ' ' : ['<Plug>(EasyAlign)', 'easy align'],
       \ 'd' : ['d$',                'delete left of line'],
       \ 'f' : ['Autoformat',        'format current file'],
       \ }
@@ -476,6 +501,10 @@ function! BufCloseOthers()
             endif
         endif
     endfor
+endfunction
+
+function! BufSwitch(num) abort
+    execute 'normal '."\<Plug>AirlineSelectTab".a:num
 endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
