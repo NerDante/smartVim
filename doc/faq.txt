@@ -12,3 +12,7 @@
     you should set your terminal fonts to nerd fonts, this repo provide 
     few in fonts directory, excute install.sh script will install these 
     fonts to your system. 
+
+3. The mechanism of vim-which-key is popup key bindings will show while you nerver
+type a key in timeout time. the right way to use it is type keys immediatelly only
+if you forget it, then popup window will give your tips.

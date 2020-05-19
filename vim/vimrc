@@ -434,7 +434,8 @@ let g:which_key_map.m = 'mark-current-symbol'
 let g:which_key_map.o = {
       \ 'name' : '+open' ,
       \ 'c' : [':CocConfig',      'coc config'],
-      \ 'e' : [':NERDTreeToggle', 'explorer window toggle'] ,
+      \ 'e' : [':NERDTreeToggle', 'filetree toggle'] ,
+      \ 'f' : [':NERDTreeFind',   'loacte current file in filetree'] ,
       \ 's' : [':Startify',       'startify'],
       \ 't' : [':TagbarToggle',   'tagbar toggle'] ,
       \ 'u' : [':UndotreeToggle', 'undotree toggle'] ,
