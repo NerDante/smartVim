@@ -43,7 +43,6 @@ cd smartVim
  [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)             | for comment
  [vim-scripts/DoxygenToolkit.vim](https://github.com/vim-scripts/DoxygenToolkit.vim) | for generate doc
  [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot)                     | highlight code
- [SirVer/ultisnips](https://github.com/SirVer/ultisnips)                             | snippet
  [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion)           | powerful mothion plugin
  [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)                         | git support
  [junegunn/gv.vim](https://github.com/junegunn/gv.vim)                               | A git commit browser in Vim
