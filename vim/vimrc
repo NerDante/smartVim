@@ -103,7 +103,6 @@ Plug 'skywind3000/gutentags_plus'
 Plug 'Yggdroot/vim-mark'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/DoxygenToolkit.vim'
-Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -259,7 +258,15 @@ inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
+
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -321,6 +328,7 @@ let g:coc_global_extensions =[
             \'coc-html', 
             \'coc-css', 
             \'coc-git', 
+            \'coc-snippets', 
             \'coc-prettier']
 
 "plugset: vim-polyglot
@@ -357,12 +365,6 @@ let g:NERDAltDelims_c = 1
 let g:NERDCreateDefaultMappings = 0
 nmap <leader>c <plug>NERDCommenterToggle
 vmap <leader>c <plug>NERDCommenterToggle
-
-"plugset: ultisnips
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:UltiSnipsExpandTrigger="<c-e>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 
 " plugset: vim-choosewin
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
