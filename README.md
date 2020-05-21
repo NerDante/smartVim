@@ -2,7 +2,7 @@
 ## Overview
 This conifguration uses vim-plug as the plugin manager to configure vim as IDE-like tool for development C/C++, Python, etc.
     
-![image](https://github.com/NerDante/smartVim/blob/master/screenshot/startPage.png)
+![image](https://pic.downk.cc/item/5ec35281c2a9a83be57c3f1c.png)
 - Support LSP by [coc.nvim](https://github.com/neoclide/coc.nvim), auto completion as IDE.
 - Fast fuzzy search buffer/file/tag, powered by [LeaderF](https://github.com/Yggdroot/LeaderF).
 - Beautiful UI.
@@ -61,12 +61,15 @@ vim-which-key powerd, "leader key" will show you everything
 
 ## ScreenShot
 ### complete(LSP based)
-![image](https://github.com/NerDante/smartVim/blob/master/screenshot/complete.gif)
+![image](https://pic.downk.cc/item/5ec35289c2a9a83be57c4ad7.gif)
+
 ### fuzzy find based leaderf(file and symbol)
-![image](https://github.com/NerDante/smartVim/blob/master/screenshot/fuzzyfind.gif)
+![image](https://pic.downk.cc/item/5ec3528fc2a9a83be57c532a.gif)
+
 ### jump to define/reference 
-![image](https://github.com/NerDante/smartVim/blob/master/screenshot/gotodefine.gif)
-![image](https://github.com/NerDante/smartVim/blob/master/screenshot/getreference.gif)
+![image](https://pic.downk.cc/item/5ec35295c2a9a83be57c5cd7.gif)
+
+![image](https://pic.downk.cc/item/5ec35295c2a9a83be57c5cd7.gif)
 
 
 ## Contact
