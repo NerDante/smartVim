@@ -1,4 +1,4 @@
-
+[中文说明](https://github.com/NerDante/smartVim/blob/master/README_CN.md)
 ## Overview
 This conifguration uses vim-plug as the plugin manager to configure vim as IDE-like tool for development C/C++, Python, etc.
     
