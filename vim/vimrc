@@ -28,6 +28,7 @@ set cursorline
 set whichwrap+=<,>,h,l   
 set ttimeoutlen=0
 set virtualedit=block,onemore
+set mouse=a
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indent 
