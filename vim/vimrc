@@ -381,13 +381,16 @@ let g:colorizer_nomap = 1
 call which_key#register(';', "g:which_key_map")
 nnoremap <silent> <leader> :<c-u>WhichKey ";"<CR>
 vnoremap <silent> <leader> :<c-u>WhichKeyVisual ";"<CR>
-set timeoutlen=300
+set timeoutlen=500
 
 let g:which_key_map =  {}
 nnoremap <silent> <leader>, <c-o>
 let g:which_key_map[','] = '<== back'
 nnoremap <leader>; :LeaderfBufTag<cr>
 let g:which_key_map[';'] = 'tag-of-current'
+
+nmap <leader>s <Plug>(easymotion-s)
+let g:which_key_map['s'] = 'move-to-ch'
 
 let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
