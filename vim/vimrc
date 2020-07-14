@@ -119,7 +119,7 @@ if beauty_switch
     Plug 'ryanoasis/vim-devicons'
 endif
 
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'luochen1990/rainbow'
