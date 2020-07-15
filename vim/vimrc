@@ -28,7 +28,7 @@ set cursorline
 set whichwrap+=<,>,h,l   
 set ttimeoutlen=0
 set virtualedit=block,onemore
-set mouse=a
+" set mouse=a
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indent 
@@ -416,6 +416,7 @@ let g:which_key_map.e = {
       \ ' ' : ['<Plug>(EasyAlign)', 'easy align'],
       \ 'd' : ['d$',                'delete left of line'],
       \ 'f' : ['Autoformat',        'format current file'],
+      \ 'm' : [':MarkdownPreview',  'preview markdown browser'],
       \ 't' : [':TableModeToggle',   'table mode toggle'],
       \ }
 

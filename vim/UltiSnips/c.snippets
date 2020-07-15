@@ -123,6 +123,10 @@ snippet li "LOGINFO(...)"
 LOGINFO("${1:info}\n");
 endsnippet
 
+snippet lm "LOGMOD(...)"
+LOGMOD(DBG_IPADP, LOGMOD_TEST, "${1:info}\n");
+endsnippet
+
 # quick comment
 snippet ca "Begin add by xxx. 2019/11/19"
 /* Begin: Added by ${1:author}, Dscp:${1:description}  `!v strftime('%Y/%m/%d')` */
