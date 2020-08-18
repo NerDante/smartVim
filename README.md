@@ -1,3 +1,10 @@
+
+                        _____                      __     _    ___           
+                       / ___/____ ___  ____ ______/ /_   | |  / (_)___ ___   
+                       \__ \/ __ `__ \/ __ `/ ___/ __/   | | / / / __ `__ \  
+                      ___/ / / / / / / /_/ / /  / /_     | |/ / / / / / / /  
+                     /____/_/ /_/ /_/\__,_/_/   \__/     |___/_/_/ /_/ /_/   
+
 [中文说明](https://github.com/NerDante/smartVim/blob/master/README_CN.md)
 ## Overview
 This conifguration uses vim-plug as the plugin manager to configure vim as IDE-like tool for development C/C++, Python, etc.
