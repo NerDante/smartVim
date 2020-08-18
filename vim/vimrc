@@ -241,6 +241,7 @@ noremap <silent> <leader>gg :GscopeFind g <C-R><C-W><cr>   "Find symbol definiti
 
 "plugset : coc.vim 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:coc_disable_startup_warning=1
 " if hidden is not set, TextEdit might fail.
 set hidden
 " Some servers have issues with backup files, see #649
