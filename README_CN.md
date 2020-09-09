@@ -55,6 +55,7 @@ cd smartVim
  [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)     | 多行编辑特性
  [luochen1990/rainbow](https://github.com/luochen1990/rainbow)                       | 彩虹括号
  [liuchengxu/vim-which-key](https://github.com/liuchengxu/vim-which-key)             | 悬浮显示按键绑定
+ [NerDante/vim-terminal](https://github.com/NerDante/vim-terminal)                   | vim/neovim terminal 使用
 
 ## 按键绑定
 vim-which-key 为基础的按键绑定, 无需记忆， 按下"leader key" 会按类别显示主要按键绑定

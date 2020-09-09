@@ -124,6 +124,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'luochen1990/rainbow'
 Plug 't9md/vim-choosewin'
 Plug 'liuchengxu/vim-which-key'
+Plug 'NerDante/vim-terminal'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -347,6 +348,21 @@ let g:choosewin_statusline_replace = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:colorizer_nomap = 1
 
+" plugset: vim-terminal
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:vs_terminal_custom_height = 20
+map <silent> <leader>t :VSTerminalToggle<cr>
+if has('nvim')
+    tnoremap <leader>t <C-\><C-n> :VSTerminalToggle<cr>
+    tnoremap <C-w> <C-\><C-n><C-w>
+else
+    tmap <silent> <leader>t <c-w>:VSTerminalToggle<cr>
+endif
+tnoremap <leader>wh <C-\><C-N><C-w>h
+tnoremap <leader>wj <C-\><C-N><C-w>j
+tnoremap <leader>wk <C-\><C-N><C-w>k
+tnoremap <leader>wl <C-\><C-N><C-w>l
+
 " plugset: vim-which-key  && Main key mapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call which_key#register(';', "g:which_key_map")
@@ -362,6 +378,8 @@ let g:which_key_map[';'] = 'tag-of-current'
 
 nmap <leader>s <Plug>(easymotion-s)
 let g:which_key_map['s'] = 'move-to-ch'
+
+let g:which_key_map['t'] = 'toggle terminal window'
 
 let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
