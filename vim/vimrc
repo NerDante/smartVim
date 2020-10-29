@@ -85,6 +85,10 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 
+"plugset: vim-polyglot
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:polyglot_disabled = ['markdown'] "should  set it before load polyglot
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " plugin list
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -303,10 +307,6 @@ let g:coc_global_extensions =[
             \'coc-snippets', 
             \'coc-clangd',
             \'coc-prettier']
-
-"plugset: vim-polyglot
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:polyglot_disabled = ['markdown']
 
 "plugset: tagbar
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
