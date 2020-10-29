@@ -50,5 +50,7 @@
     "git.topRemovedSign.text": "▔",
     "git.changeRemovedSign.text": "▋",
 
-    "clangd.disableDiagnostics":true
+    "clangd.disableDiagnostics":true,
+
+    "snippets.snipmate.enable":false
 }
