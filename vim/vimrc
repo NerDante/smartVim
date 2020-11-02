@@ -22,7 +22,7 @@ set showcmd
 set ruler                
 set laststatus=2         
 set number               
-set relativenumber       
+set relativenumber
 set cursorline           
 set whichwrap+=<,>,h,l   
 set ttimeoutlen=0
@@ -447,6 +447,8 @@ let g:which_key_map.q = {
 
 let g:which_key_map.v = {
       \ 'name' : '+view' ,
+      \ 'i' : [':IndentLinesToggle','toggle indent line'],
+      \ 'n' : ['ToggleLineNumber()','toggle line number'],
       \ 'r' : [':RainbowToggle',    'toggle rainbow braces'],
       \ 't' : ['ToggleWrap()',      'toggle wrap content'],
       \ 'c' : [':ColorToggle',      'toggle hex-color highlight'],
@@ -517,6 +519,16 @@ endfunction
 
 function! BufSwitch(num) abort
     execute 'normal '."\<Plug>AirlineSelectTab".a:num
+endfunction
+
+function! ToggleLineNumber()
+    if (&number == 1)
+        set nonumber
+        set norelativenumber
+    else
+        set number
+        set relativenumber
+    endif
 endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
