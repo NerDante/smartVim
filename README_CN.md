@@ -56,6 +56,7 @@ cd smartVim
  [luochen1990/rainbow](https://github.com/luochen1990/rainbow)                       | 彩虹括号
  [liuchengxu/vim-which-key](https://github.com/liuchengxu/vim-which-key)             | 悬浮显示按键绑定
  [NerDante/vim-terminal](https://github.com/NerDante/vim-terminal)                   | vim/neovim terminal 使用
+ [gcmt/wildfire.vim](https://github.com/gcmt/wildfire.vim)                           | 括号、引号等中间区域的快捷选择
 
 ## 按键绑定
 vim-which-key 为基础的按键绑定, 无需记忆， 按下"leader key" 会按类别显示主要按键绑定

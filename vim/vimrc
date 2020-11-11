@@ -129,6 +129,7 @@ Plug 'luochen1990/rainbow'
 Plug 't9md/vim-choosewin'
 Plug 'liuchengxu/vim-which-key'
 Plug 'NerDante/vim-terminal'
+Plug 'gcmt/wildfire.vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 

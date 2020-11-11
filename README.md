@@ -63,6 +63,7 @@ cd smartVim
  [luochen1990/rainbow](https://github.com/luochen1990/rainbow)                       | Rainbow Parentheses
  [liuchengxu/vim-which-key](https://github.com/liuchengxu/vim-which-key)             | shows keybindings in popup
  [NerDante/vim-terminal](https://github.com/NerDante/vim-terminal)                   | vim/neovim terminal toggle
+ [gcmt/wildfire.vim](https://github.com/gcmt/wildfire.vim)                           | Smart selection of the closest text object
 
 ## Keymap
 vim-which-key powerd, "leader key" will show you everything
