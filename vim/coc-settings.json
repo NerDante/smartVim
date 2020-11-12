@@ -51,6 +51,7 @@
     "git.changeRemovedSign.text": "▋",
 
     "clangd.disableDiagnostics":true,
+    "clangd.disableSnippetCompletion":true,
 
     "snippets.snipmate.enable":false
 }

@@ -260,10 +260,9 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
 let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
-imap <C-j> <Plug>(coc-snippets-expand-jump)"
+imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 function! s:check_back_space() abort
   let col = col('.') - 1

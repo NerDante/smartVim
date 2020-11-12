@@ -35,6 +35,7 @@ function smartvim_update()
 {
     cp -f ${CURPATH}/vim/vimrc ~/.vim/vimrc
     cp -f ${CURPATH}/vim/coc-settings.json ~/.vim/coc-settings.json
+    cp -f ${CURPATH}/vim/UltiSnips/* ~/.vim/UltiSnips/
 
     vim -c "PlugInstall" -c "q" -c "q"
 }
