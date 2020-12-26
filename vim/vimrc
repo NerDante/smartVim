@@ -124,12 +124,13 @@ endif
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
 Plug 'dhruvasagar/vim-table-mode'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi'
 Plug 'luochen1990/rainbow'
 Plug 't9md/vim-choosewin'
 Plug 'liuchengxu/vim-which-key'
 Plug 'NerDante/vim-terminal'
 Plug 'gcmt/wildfire.vim'
+Plug 'tpope/vim-surround'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -160,6 +161,17 @@ let g:airline#extensions#tabline#fnametruncate = 16
 let g:airline#extensions#tabline#fnamecollapse = 2
 let g:airline#extensions#tabline#buffer_idx_mode = 1"
 
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+nmap <leader>p <Plug>AirlineSelectPrevTab
+nmap <leader>n <Plug>AirlineSelectNextTab
 
 if !exists('g:airline_symbols')
    let g:airline_symbols = {}
@@ -375,28 +387,25 @@ nnoremap <silent> <leader>, <c-o>
 let g:which_key_map[','] = '<== back'
 nnoremap <leader>; :LeaderfBufTag<cr>
 let g:which_key_map[';'] = 'tag-of-current'
+nnoremap <leader>b :LeaderfBuffer<cr>
+let g:which_key_map['b'] = 'Buffer Choose'
+
+let g:which_key_map['1'] = 'Switch Buffer 1'
+let g:which_key_map['2'] = 'Switch Buffer 2'
+let g:which_key_map['3'] = 'Switch Buffer 3'
+let g:which_key_map['4'] = 'Switch Buffer 4'
+let g:which_key_map['5'] = 'Switch Buffer 5'
+let g:which_key_map['6'] = 'Switch Buffer 6'
+let g:which_key_map['7'] = 'Switch Buffer 7'
+let g:which_key_map['8'] = 'Switch Buffer 8'
+let g:which_key_map['9'] = 'Switch Buffer 9'
+let g:which_key_map['n'] = 'Next Buffer'
+let g:which_key_map['p'] = 'Previous Buffer'
 
 nmap <leader>s <Plug>(easymotion-s)
 let g:which_key_map['s'] = 'move-to-ch'
 
 let g:which_key_map['t'] = 'toggle terminal window'
-
-let g:which_key_map.b = {
-      \ 'name' : '+buffer' ,
-      \ ' ' : [':bNext',         'next'],
-      \ '1' : ['BufSwitch(1)',   'switch to tab-1'],
-      \ '2' : ['BufSwitch(2)',   'switch to tab-2'],
-      \ '3' : ['BufSwitch(3)',   'switch to tab-3'],
-      \ '4' : ['BufSwitch(4)',   'switch to tab-4'],
-      \ '5' : ['BufSwitch(5)',   'switch to tab-5'],
-      \ '6' : ['BufSwitch(6)',   'switch to tab-6'],
-      \ '7' : ['BufSwitch(7)',   'switch to tab-7'],
-      \ '8' : ['BufSwitch(8)',   'switch to tab-8'],
-      \ '9' : ['BufSwitch(9)',   'switch to tab-9'],
-      \ 'b' : [':LeaderfBuffer', 'switch buffer'],
-      \ 'c' : [':bdelete',       'close'],
-      \ 'p' : [':bprevious',     'previous'],
-      \ }
 
 let g:which_key_map.c = 'comment-toggle'
 
@@ -416,6 +425,9 @@ let g:which_key_map.f = {
       \ 't' : [':LeaderfBufTag', 'tag of current file'] ,
       \ 'a' : [':LeaderfTag',    'tag of project'] ,
       \ }
+
+nmap <leader>k :bdelete<CR>
+let g:which_key_map.k = 'clos-current-buffer'
 
 let g:which_key_map.g = { 'name' : '+goto'  }
 let g:which_key_map.g.d = 'definition'
