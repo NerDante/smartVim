@@ -388,24 +388,24 @@ let g:which_key_map[','] = '<== back'
 nnoremap <leader>; :LeaderfBufTag<cr>
 let g:which_key_map[';'] = 'tag-of-current'
 nnoremap <leader>b :LeaderfBuffer<cr>
-let g:which_key_map['b'] = 'Buffer Choose'
+let g:which_key_map['b'] = 'Choose-opened-buffer'
 
-let g:which_key_map['1'] = 'Switch Buffer 1'
-let g:which_key_map['2'] = 'Switch Buffer 2'
-let g:which_key_map['3'] = 'Switch Buffer 3'
-let g:which_key_map['4'] = 'Switch Buffer 4'
-let g:which_key_map['5'] = 'Switch Buffer 5'
-let g:which_key_map['6'] = 'Switch Buffer 6'
-let g:which_key_map['7'] = 'Switch Buffer 7'
-let g:which_key_map['8'] = 'Switch Buffer 8'
-let g:which_key_map['9'] = 'Switch Buffer 9'
-let g:which_key_map['n'] = 'Next Buffer'
-let g:which_key_map['p'] = 'Previous Buffer'
+let g:which_key_map['1'] = 'Switch-buffer 1'
+let g:which_key_map['2'] = 'Switch-buffer 2'
+let g:which_key_map['3'] = 'Switch-buffer 3'
+let g:which_key_map['4'] = 'Switch-buffer 4'
+let g:which_key_map['5'] = 'Switch-buffer 5'
+let g:which_key_map['6'] = 'Switch-buffer 6'
+let g:which_key_map['7'] = 'Switch-buffer 7'
+let g:which_key_map['8'] = 'Switch-buffer 8'
+let g:which_key_map['9'] = 'Switch-buffer 9'
+let g:which_key_map['n'] = 'Next-Buffer'
+let g:which_key_map['p'] = 'Previous-Buffer'
 
 nmap <leader>s <Plug>(easymotion-s)
 let g:which_key_map['s'] = 'move-to-ch'
 
-let g:which_key_map['t'] = 'toggle terminal window'
+let g:which_key_map['t'] = 'toggle-terminal'
 
 let g:which_key_map.c = 'comment-toggle'
 
