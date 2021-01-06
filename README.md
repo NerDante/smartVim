@@ -13,7 +13,7 @@ This conifguration uses vim-plug as the plugin manager to configure vim as IDE-l
 - Support LSP by [coc.nvim](https://github.com/neoclide/coc.nvim), auto completion as IDE.
 - Fast fuzzy search buffer/file/tag, powered by [LeaderF](https://github.com/Yggdroot/LeaderF).
 - Beautiful UI.
-- No need remember all the key bindings, `<leader>` key will popup all of choices.
+- No need remember all the key bindings, `<leader>` key will popup most of choices.
 - Variety of edit features: tabble mode, multiline edit, easy motion, easy align, etc.
 
 
