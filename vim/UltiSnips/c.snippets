@@ -62,6 +62,10 @@ snippet ud "Util_Dump(...)"
 Util_Dump(${1:DBG_AUTH}, ${2:LOGMOD_DETAIL},"${3:description}", ${4:buf}, ${5:bufLen});
 endsnippet
 
+snippet ck "CHECK(...)"
+CHECK(${1:val} != NULL, "${2:message}", ${3:T_FAIL});
+endsnippet
+
 # quick comment
 snippet ca "Begin add by xxx. 2019/11/19"
 /* Begin: Added by ${1:author}, Dscp:${1:description}  `!v strftime('%Y/%m/%d')` */
