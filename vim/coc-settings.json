@@ -34,6 +34,13 @@
         "default": "\uf29c"
     },
 
+    "languageserver": {
+        "lua": {
+            "command": "lua-lsp",
+            "filetypes": ["lua"]
+        }
+    },
+
     "git.enableGutters": true,
     "git.branchCharacter":"\uf408",
     "git.addGBlameToBufferVar": true,
