@@ -25,38 +25,38 @@ cd smartVim
 ./smart install
 ```
 ## 主要插件
- 插件| 描述
- --------                                                                            | -------------
- [NerDante/smartColors](https://github.com/NerDante/smartColors)                     | 用于smartVim的配色方案合集
- [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline)               | 状态栏
- [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)                       | 目录树支持
- [Yggdroot/LeaderF](https://github.com/Yggdroot/LeaderF)                             | 模糊查询、搜索
- [majutsushi/tagbar](https://github.com/majutsushi/tagbar)                           | Tag 显示
- [Chiel92/vim-autoformat](https://github.com/Chiel92/vim-autoformat)                 | 自动格式化
- [jiangmiao/auto-pairs](https://github.com/jiangmiao/auto-pairs)                     | 提供成对插入、删除括号/引号等特性
- [junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align)               | 快捷对齐
- [Yggdroot/indentLine](https://github.com/Yggdroot/indentLine)                       | 用于显示缩进线
- [mhinz/vim-startify](https://github.com/mhinz/vim-startify)                         | 起始页
- [ludovicchabant/vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)     | tag显示相关
- [skywind3000/gutentags_plus](https://github.com/skywind3000/gutentags_plus)         | tag显示相关
- [Yggdroot/vim-mark](https://github.com/Yggdroot/vim-mark)                           | 不同颜色高亮显示光标下词语
- [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)             | 注释插件
- [vim-scripts/DoxygenToolkit.vim](https://github.com/vim-scripts/DoxygenToolkit.vim) | 自动生成文档
- [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot)                     | 语法高亮
- [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion)           | 快捷跳转
- [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)                         | git 支持
- [junegunn/gv.vim](https://github.com/junegunn/gv.vim)                               | git 支持
- [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)                           | 自动补全
- [mbbill/undotree](https://github.com/mbbill/undotree)                               | 可视化历史修改树
- [lilydjwg/colorizer](https://github.com/lilydjwg/colorizer)                         | 显示形如 #rrggbb 和 #rgb 的颜色
- [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)                 | 图形字符支持
- [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.vim)      | markdown 实时预览
- [dhruvasagar/vim-table-mode](https://github.com/dhruvasagar/vim-table-mode)         | 支持表格编辑模式
- [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)     | 多行编辑特性
- [luochen1990/rainbow](https://github.com/luochen1990/rainbow)                       | 彩虹括号
- [liuchengxu/vim-which-key](https://github.com/liuchengxu/vim-which-key)             | 悬浮显示按键绑定
- [NerDante/vim-terminal](https://github.com/NerDante/vim-terminal)                   | vim/neovim terminal 使用
- [gcmt/wildfire.vim](https://github.com/gcmt/wildfire.vim)                           | 括号、引号等中间区域的快捷选择
+ 插件                                                                                  | 描述
+ --------                                                                              | -------------
+ [NerDante/smartColors](https://github.com/NerDante/smartColors)                       | 用于smartVim的配色方案合集
+ [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline)                 | 状态栏
+ [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)                         | 目录树支持
+ [Yggdroot/LeaderF](https://github.com/Yggdroot/LeaderF)                               | 模糊查询、搜索
+ [majutsushi/tagbar](https://github.com/majutsushi/tagbar)                             | Tag 显示
+ [Chiel92/vim-autoformat](https://github.com/Chiel92/vim-autoformat)                   | 自动格式化
+ [jiangmiao/auto-pairs](https://github.com/jiangmiao/auto-pairs)                       | 提供成对插入、删除括号/引号等特性
+ [junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align)                 | 快捷对齐
+ [Yggdroot/indentLine](https://github.com/Yggdroot/indentLine)                         | 用于显示缩进线
+ [mhinz/vim-startify](https://github.com/mhinz/vim-startify)                           | 起始页
+ [ludovicchabant/vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)       | tag显示相关
+ [skywind3000/gutentags_plus](https://github.com/skywind3000/gutentags_plus)           | tag显示相关
+ [Yggdroot/vim-mark](https://github.com/Yggdroot/vim-mark)                             | 不同颜色高亮显示光标下词语
+ [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)               | 注释插件
+ [vim-scripts/DoxygenToolkit.vim](https://github.com/vim-scripts/DoxygenToolkit.vim)   | 自动生成文档
+ [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion)             | 快捷跳转
+ [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)                           | git 支持
+ [junegunn/gv.vim](https://github.com/junegunn/gv.vim)                                 | git 支持
+ [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)                             | 自动补全
+ [mbbill/undotree](https://github.com/mbbill/undotree)                                 | 可视化历史修改树
+ [lilydjwg/colorizer](https://github.com/lilydjwg/colorizer)                           | 显示形如 #rrggbb 和 #rgb 的颜色
+ [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)                   | 图形字符支持
+ [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.vim)        | markdown 实时预览
+ [dhruvasagar/vim-table-mode](https://github.com/dhruvasagar/vim-table-mode)           | 支持表格编辑模式
+ [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)       | 多行编辑特性
+ [luochen1990/rainbow](https://github.com/luochen1990/rainbow)                         | 彩虹括号
+ [liuchengxu/vim-which-key](https://github.com/liuchengxu/vim-which-key)               | 悬浮显示按键绑定
+ [NerDante/vim-terminal](https://github.com/NerDante/vim-terminal)                     | vim/neovim terminal 使用
+ [gcmt/wildfire.vim](https://github.com/gcmt/wildfire.vim)                             | 括号、引号等中间区域的快捷选择
+ [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | 语法高亮丽
 
 ## 按键绑定
 vim-which-key 为基础的按键绑定, 无需记忆， 按下"leader key" 会按类别显示主要按键绑定

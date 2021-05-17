@@ -66,6 +66,14 @@ snippet ck "CHECK(...)"
 CHECK(${1:val} != NULL, "${2:message}", ${3:T_FAIL});
 endsnippet
 
+snippet newtask "create new thread(...)"
+if(mOS_CreateTask((ML_U8*)"${1:taskname}", &${2:tid}, MOS_TASK_DETACH,(mOS_TASKENTRY_f)${3:thread_callback}, ${4:NULL}) != ML_SUCCESS)
+{                                                                                                                                                                                                
+	LOGERROR("Create ${1:taskname} failed!\n");
+	return;
+}
+endsnippet
+
 # quick comment
 snippet ca "Begin add by xxx. 2019/11/19"
 /* Begin: Added by ${1:author}, Dscp:${1:description}  `!v strftime('%Y/%m/%d')` */

@@ -86,10 +86,6 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 
-"plugset: vim-polyglot
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:polyglot_disabled = ['markdown'] "should  set it before load polyglot
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " plugin list
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -109,7 +105,6 @@ Plug 'Yggdroot/vim-mark'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 Plug 'honza/vim-snippets'
-Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
 Plug 'Chiel92/vim-autoformat'
@@ -132,6 +127,9 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'NerDante/vim-terminal'
 Plug 'gcmt/wildfire.vim'
 Plug 'tpope/vim-surround'
+if has('nvim')
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+endif
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -142,9 +140,11 @@ call plug#end()
 
 "colorscheme: onedark, gruvbox
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set background=light
 set background=dark
 colorscheme gruvbox
-"colorscheme onedark
+" colorscheme onedark
+
 
 "plugset: vim-airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -376,6 +376,21 @@ tnoremap <leader>wj <C-\><C-N><C-w>j
 tnoremap <leader>wk <C-\><C-N><C-w>k
 tnoremap <leader>wl <C-\><C-N><C-w>l
 
+" plugset: nvim-treesitter
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+if has('nvim')
+lua <<EOF
+    require'nvim-treesitter.configs'.setup {
+        ensure_installed = { "bash", "c", "cpp", "css", "go", "html", "java", "javascript", "json", "lua", "python","regex" }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+        ignore_install = {}, -- List of parsers to ignore installing
+        highlight = {
+            enable = true,              -- false will disable the whole extension
+            disable = { },  -- list of language that will be disabled
+        },
+    }
+EOF
+endif
 " plugset: vim-which-key  && Main key mapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call which_key#register(';', "g:which_key_map")
