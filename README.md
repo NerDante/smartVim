@@ -61,7 +61,7 @@ cd smartVim
  [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)       | True Sublime Text style multiple selections for Vim
  [luochen1990/rainbow](https://github.com/luochen1990/rainbow)                         | Rainbow Parentheses
  [liuchengxu/vim-which-key](https://github.com/liuchengxu/vim-which-key)               | shows keybindings in popup
- [NerDante/vim-terminal](https://github.com/NerDante/vim-terminal)                     | vim/neovim terminal toggle
+ [voldikss/vim-floaterm](https://github.com/voldikss/vim-floaterm)                     | Use (neo)vim terminal in the floating/popup window
  [gcmt/wildfire.vim](https://github.com/gcmt/wildfire.vim)                             | Smart selection of the closest text object
  [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | syntax highlight
 

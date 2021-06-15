@@ -16,3 +16,6 @@
 3. The mechanism of vim-which-key is popup key bindings will show while you nerver
 type a key in timeout time. the right way to use it is type keys immediatelly only
 if you forget it, then popup window will give your tips.
+
+4. Files locate changed, leaderf can not find
+    Delete cache file in .LfCache/python3/file/

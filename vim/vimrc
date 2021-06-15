@@ -124,7 +124,7 @@ Plug 'mg979/vim-visual-multi'
 Plug 'luochen1990/rainbow'
 Plug 't9md/vim-choosewin'
 Plug 'liuchengxu/vim-which-key'
-Plug 'NerDante/vim-terminal'
+Plug 'voldikss/vim-floaterm'
 Plug 'gcmt/wildfire.vim'
 Plug 'tpope/vim-surround'
 if has('nvim')
@@ -144,7 +144,6 @@ call plug#end()
 set background=dark
 colorscheme gruvbox
 " colorscheme onedark
-
 
 "plugset: vim-airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -361,20 +360,11 @@ let g:choosewin_statusline_replace = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:colorizer_nomap = 1
 
-" plugset: vim-terminal
+" plugset: vim-floaterm
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:vs_terminal_custom_height = 20
-map <silent> <leader>t :VSTerminalToggle<cr>
-if has('nvim')
-    tnoremap <leader>t <C-\><C-n> :VSTerminalToggle<cr>
-    tnoremap <C-w> <C-\><C-n><C-w>
-else
-    tmap <silent> <leader>t <c-w>:VSTerminalToggle<cr>
-endif
-tnoremap <leader>wh <C-\><C-N><C-w>h
-tnoremap <leader>wj <C-\><C-N><C-w>j
-tnoremap <leader>wk <C-\><C-N><C-w>k
-tnoremap <leader>wl <C-\><C-N><C-w>l
+let g:floaterm_keymap_toggle = '<leader>t'
+let g:floaterm_width = 0.8
+let g:floaterm_height = 0.8
 
 " plugset: nvim-treesitter
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

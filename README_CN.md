@@ -54,7 +54,7 @@ cd smartVim
  [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)       | 多行编辑特性
  [luochen1990/rainbow](https://github.com/luochen1990/rainbow)                         | 彩虹括号
  [liuchengxu/vim-which-key](https://github.com/liuchengxu/vim-which-key)               | 悬浮显示按键绑定
- [NerDante/vim-terminal](https://github.com/NerDante/vim-terminal)                     | vim/neovim terminal 使用
+ [voldikss/vim-floaterm](https://github.com/voldikss/vim-floaterm)                     | vim中开启终端
  [gcmt/wildfire.vim](https://github.com/gcmt/wildfire.vim)                             | 括号、引号等中间区域的快捷选择
  [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | 语法高亮丽
 
