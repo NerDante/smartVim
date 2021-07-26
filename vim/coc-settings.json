@@ -34,13 +34,6 @@
         "default": "\uf29c"
     },
 
-    "languageserver": {
-        "lua": {
-            "command": "lua-lsp",
-            "filetypes": ["lua"]
-        }
-    },
-
     "git.enableGutters": true,
     "git.branchCharacter":"\uf408",
     "git.addGBlameToBufferVar": true,
@@ -60,5 +53,6 @@
     "clangd.disableDiagnostics":true,
     "clangd.disableSnippetCompletion":true,
 
+    "cSpell.enabled": false,
     "snippets.snipmate.enable":false
 }
