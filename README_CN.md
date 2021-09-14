@@ -47,7 +47,6 @@ cd smartVim
  [junegunn/gv.vim](https://github.com/junegunn/gv.vim)                                 | git 支持
  [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)                             | 自动补全
  [mbbill/undotree](https://github.com/mbbill/undotree)                                 | 可视化历史修改树
- [lilydjwg/colorizer](https://github.com/lilydjwg/colorizer)                           | 显示形如 #rrggbb 和 #rgb 的颜色
  [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)                   | 图形字符支持
  [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.vim)        | markdown 实时预览
  [dhruvasagar/vim-table-mode](https://github.com/dhruvasagar/vim-table-mode)           | 支持表格编辑模式
@@ -56,7 +55,6 @@ cd smartVim
  [liuchengxu/vim-which-key](https://github.com/liuchengxu/vim-which-key)               | 悬浮显示按键绑定
  [voldikss/vim-floaterm](https://github.com/voldikss/vim-floaterm)                     | vim中开启终端
  [gcmt/wildfire.vim](https://github.com/gcmt/wildfire.vim)                             | 括号、引号等中间区域的快捷选择
- [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | 语法高亮丽
 
 ## 按键绑定
 vim-which-key 为基础的按键绑定, 无需记忆， 按下"leader key" 会按类别显示主要按键绑定

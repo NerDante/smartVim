@@ -112,7 +112,7 @@ Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'mbbill/undotree'
-Plug 'lilydjwg/colorizer'
+"Plug 'lilydjwg/colorizer'
 
 if beauty_switch
     Plug 'ryanoasis/vim-devicons'
@@ -127,9 +127,6 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'voldikss/vim-floaterm'
 Plug 'gcmt/wildfire.vim'
 Plug 'tpope/vim-surround'
-if has('nvim')
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-endif
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -366,21 +363,6 @@ let g:floaterm_keymap_toggle = '<leader>t'
 let g:floaterm_width = 0.8
 let g:floaterm_height = 0.8
 
-" plugset: nvim-treesitter
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-if has('nvim')
-lua <<EOF
-    require'nvim-treesitter.configs'.setup {
-        ensure_installed = { "bash", "c", "cpp", "css", "go", "html", "java", "javascript", "json", "lua", "python","regex" }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-        ignore_install = {}, -- List of parsers to ignore installing
-        highlight = {
-            enable = true,              -- false will disable the whole extension
-            disable = { },  -- list of language that will be disabled
-        },
-    }
-EOF
-endif
 " plugset: vim-which-key  && Main key mapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call which_key#register(';', "g:which_key_map")

@@ -54,7 +54,6 @@ cd smartVim
  [junegunn/gv.vim](https://github.com/junegunn/gv.vim)                                 | A git commit browser in Vim
  [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)                             | auto complete engine support LSP
  [mbbill/undotree](https://github.com/mbbill/undotree)                                 | visualizes undo history
- [lilydjwg/colorizer](https://github.com/lilydjwg/colorizer)                           | A Vim plugin to colorize all text in the form #rrggbb or #rgb
  [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)                   | Adds file type icons to Vim plugins such as: NERDTree, vim-airline, vim-startify and many more
  [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.vim)        | preview Markdown in real-time with a web browser
  [dhruvasagar/vim-table-mode](https://github.com/dhruvasagar/vim-table-mode)           | An awesome automatic table creator & formatter allowing one to create neat tables as you type
@@ -63,7 +62,6 @@ cd smartVim
  [liuchengxu/vim-which-key](https://github.com/liuchengxu/vim-which-key)               | shows keybindings in popup
  [voldikss/vim-floaterm](https://github.com/voldikss/vim-floaterm)                     | Use (neo)vim terminal in the floating/popup window
  [gcmt/wildfire.vim](https://github.com/gcmt/wildfire.vim)                             | Smart selection of the closest text object
- [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | syntax highlight
 
 ## Keymap
 vim-which-key powerd, "leader key" will show you everything
