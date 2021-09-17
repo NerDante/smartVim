@@ -94,7 +94,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'NerDante/smartColors'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension'  }
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
 Plug 'Yggdroot/indentLine'
@@ -127,6 +127,8 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'voldikss/vim-floaterm'
 Plug 'gcmt/wildfire.vim'
 Plug 'tpope/vim-surround'
+
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase'  }
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -139,8 +141,8 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set background=light
 set background=dark
-colorscheme gruvbox
-" colorscheme onedark
+" colorscheme gruvbox
+colorscheme onedark
 
 "plugset: vim-airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -198,11 +200,7 @@ let g:Lf_WildIgnore = {
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
 let g:Lf_WorkingDirectoryMode = 'Ac'
 let g:Lf_ShowRelativePath = 1
-if has('nvim')
-    let g:Lf_WindowPosition = 'popup'
-else
-    let g:Lf_WindowPosition = 'bottom'
-endif
+let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
 let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "DejaVu Sans Mono for Powerline" }
 let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
@@ -363,6 +361,11 @@ let g:floaterm_keymap_toggle = '<leader>t'
 let g:floaterm_width = 0.8
 let g:floaterm_height = 0.8
 
+" plugset: vim-hexokinase'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:Hexokinase_ftEnabled = ['css', 'html', 'javascript', 'vim']
+let g:Hexokinase_highlighters = ['backgroundfull']
+
 " plugset: vim-which-key  && Main key mapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call which_key#register(';', "g:which_key_map")
@@ -451,7 +454,7 @@ let g:which_key_map.v = {
       \ 'n' : ['ToggleLineNumber()','toggle line number'],
       \ 'r' : [':RainbowToggle',    'toggle rainbow braces'],
       \ 't' : ['ToggleWrap()',      'toggle wrap content'],
-      \ 'c' : [':ColorToggle',      'toggle hex-color highlight'],
+      \ 'c' : [':HexokinaseToggle',      'toggle hex-color highlight'],
       \ }
 
 let g:which_key_map.w = {
