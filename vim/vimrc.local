@@ -1,2 +1,4 @@
 " machine depended config , put you own config here
 inoremap jk <esc>
+
+let dark_background = 0

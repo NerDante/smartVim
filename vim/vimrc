@@ -7,6 +7,13 @@ let mapleader = ";"
 " custom settings 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let beauty_switch=1    
+" put dark_background to vimrc.local 
+" let dark_background = 0
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" machine-depend config
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+source ~/.vimrc.local
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " common
@@ -92,7 +99,10 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
 Plug 'NerDante/smartColors'
+Plug 'rakr/vim-one'
+Plug 'haystackandroid/snow'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension'  }
 Plug 'jiangmiao/auto-pairs'
@@ -113,6 +123,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'mbbill/undotree'
 "Plug 'lilydjwg/colorizer'
+Plug 'sheerun/vim-polyglot'
 
 if beauty_switch
     Plug 'ryanoasis/vim-devicons'
@@ -137,16 +148,26 @@ call plug#end()
 " plugin set
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"colorscheme: onedark, gruvbox
+"colorscheme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" set background=light
-set background=dark
-" colorscheme gruvbox
-colorscheme onedark
+if dark_background
+    set background=dark
+    colorscheme gruvbox
+    " colorscheme onedark
+else
+    set background=light
+    colorscheme snow
+    " colorscheme one
+endif
 
 "plugset: vim-airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:airline_theme="onedark" "open if colorscheme not support vim-airline
+if dark_background
+    " let g:airline_theme="onedark" "open if colorscheme not support vim-airline
+else
+    let g:airline_theme="base16_one_light"
+endif
+
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#virtualenv#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
@@ -534,7 +555,3 @@ function! ToggleLineNumber()
     endif
 endfunction
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" machine-depend config
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-source ~/.vimrc.local
